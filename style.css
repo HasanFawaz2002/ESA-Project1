@@ -5,7 +5,6 @@ body{
 
 nav{
     background-color: white;
-    box-shadow: 0px 4px 15px black;
     height: 4.5rem;
 
 }
@@ -95,6 +94,12 @@ position: relative;
 }
 .rotate{
     transform: rotate(90deg);
+}
+.btn-toggle{
+width: 100%;
+}
+.btn-toggle:hover{
+    background: lightgray;
 }
 
 /* Middle container */
