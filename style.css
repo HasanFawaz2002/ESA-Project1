@@ -93,6 +93,9 @@ position: relative;
 .dropdown-container ul li {
     margin: 20px 10px 0 10px;
 }
+.rotate{
+    transform: rotate(90deg);
+}
 
 /* Middle container */
 
