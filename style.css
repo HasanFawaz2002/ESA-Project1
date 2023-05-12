@@ -6,9 +6,7 @@ body{
 nav{
     background-color: white;
     box-shadow: 0px 4px 15px black;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    height: 6.5rem;
+    height: 4.5rem;
 
 }
 #btn{
@@ -26,7 +24,8 @@ nav{
 }
 .nav-image{
     border-radius: 50%;
-    width: 100px;
+    width: 75px;
+    height: 50px;
 }
 #navbarsExample04{
     margin-left: 200px;
@@ -73,6 +72,10 @@ position: relative;
 .d-flex{
     height: fit-content;
     margin-left: 2rem;
+}
+.sb-logo{
+    width: 30px;
+    height: 30px;
 }
 
 /*Drop down*/
