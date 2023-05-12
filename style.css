@@ -235,43 +235,40 @@ color: white;
 .first-post{
     height: 400px;
     width: 100%;
-    background-color: #0055FF;
     border-radius: 25px;
     margin-top: 2rem;
+    background-color: white;
 }
-.first-post-img{
+.posts-img{
     height:130px;
     width: 130px;
     border-radius: 50%;
-    margin-top: 2rem;
-    margin-left:2rem ;
 }
-.first-post-header{
+.posts-img-btn{
+    margin: 2rem 0 0 2rem;
+}
+.posts-header{
     display: flex;
     align-items: center;
 }
 
-.fisrt-post-text{
+.posts-text{
+    color: black;
     margin-left: 2rem;
 }
-.fisrt-post-btn{
-    margin-left: 18rem;
-    background: transparent;
+.posts-btn{
+    margin-left: 25rem;
     font-weight: bolder;
     border: transparent;
-    border-radius: 50%;
-    transition: all ease 400ms;
+    background-color: transparent;
 }
-.fisrt-post-btn:hover{
-    background-color: white;    
-}
-.first-post-content{
+
+.posts-content{
     margin-left:2rem ;
     margin-top: 2rem;
     width: 75%;
-    color: white;
 }
-.first-post-footer{
+.posts-footer{
     display: flex;
     margin-left: 2rem;
     margin-top: 4rem;
@@ -279,6 +276,16 @@ color: white;
 .footer-text1,.footer-text2,.footer-text3{
     font-weight: bold;
     margin: 0;
+    border: 1px solid #0055FF;
+    background: white;
+    color: #0055FF;
+    border-radius: 25px;
+    transition: all ease 400ms;
+}
+.footer-text1:hover,.footer-text2:hover,.footer-text3:hover{
+    border: transparent;
+    background-color: #0055FF;
+    color: white;
 }
 .footer-text1{
     margin-left: 1rem;
@@ -291,3 +298,21 @@ color: white;
 }
 
 
+/* Second post container */
+.second-post{
+    height: 600px;
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    margin-top: 2rem;
+}
+
+.posts-images-container{
+    display: flex;
+}
+.posts-img1,.posts-img2,.posts-img3{
+width: 32%;
+height: 180px;
+margin: 0 1% 0 1%;
+border-radius: 25px;
+}
