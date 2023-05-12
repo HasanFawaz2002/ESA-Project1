@@ -68,9 +68,7 @@ margin-top: 2rem;
 }
 
 /* Side Bar */
-.sb-logo{
-    width: 30px;
-}
+
 #SO-btn{
     margin-top:115px ;
    border: none;
@@ -239,4 +237,9 @@ h5{
 background: #0055FF;
 border: transparent;
 color: white;
+}
+.sb-logo{
+
+    width: 19px;
+    height: 19px;
 }
