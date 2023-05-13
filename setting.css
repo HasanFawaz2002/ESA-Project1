@@ -2,43 +2,40 @@ body {
     background-color: rgb(200, 228, 253);
 }
 
+/*header css  */
 header {
     background-color: white;
-    /*position: fixed;  iza bde yeha senbte */
+
     width: 100%;
     margin-top: 0%;
     height: 70px;
-    
+
+    /*position: fixed;  iza bde yeha senbte */
     /*box-shadow: 0 0 25px 0 black;*/
 }
+
 header * {
-    
-    display:inline-block;
+
+    display: inline-block;
+    /*display of header */
 }
-nav{
+
+/*nav inside header */
+nav {
     margin-top: 0%;
 }
 
+/*h1 "hangout"*/
 h1 {
 
     color: rgb(40, 92, 235);
     font-family: Lucida Handwriting;
-   
 
-}
-
-.div2 h1 {
-    left: 0;
-    margin: 0;
-    padding-left: 10px;
-    right: 0;
-   
-    color: rgb(40, 92, 235);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 
+/*Search input text inside */
 .search input[type=text] {
     width: 250px;
     height: 30px;
@@ -47,32 +44,28 @@ h1 {
     border: grey;
     background-color: rgb(224, 218, 218);
     border: 1px grey;
-    
+
 
 }
 
+/*button search margin */
 .search {
     margin: 7px;
 
 
 }
 
-
-.logo {
-    color: white;
-    text-decoration: none;
-    text-align: left;
-    border-radius: 15px;
-    overflow: hidden;
-    display: inline;
-}
-
+/*logo image  */
 .logo {
     width: 8%;
     padding-left: 12px;
     padding-top: 1%;
+    border-radius: 15px;
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------------" */
+
+/*div1 home cat setting on left  */
 .div1 {
     width: 20%;
     height: 400px;
@@ -82,64 +75,59 @@ h1 {
     border-radius: 20px;
 }
 
+/*div1 home cat setting on left buttons  */
 .btn-group button {
     background-color: white;
     text-align: left;
     padding-left: 2%;
     border: none;
     color: black;
-    /* White text */
-    /* Some padding */
     cursor: pointer;
-    /* Pointer/hand icon */
     width: 100%;
     height: 50px;
     border-radius: 10px;
     direction: ltr;
     display: block;
-    /* Make the buttons appear below each other */
     text-shadow: 2px 2px 4px grey;
 }
 
 .btn-group button:not(:last-child) {
     border-bottom: none;
-    /* Prevent double borders */
 }
 
-/* Add a background color on hover */
+/*Div1  button on hover */
 .btn-group button:hover {
     background-color: rgb(222, 228, 222);
 }
 
+/*Div1 signout button  */
 .btn-group2 button {
     background-color: white;
     border: none;
-    
     color: grey;
-    /* White text */
     padding: 20px 44px;
-    /* Some padding */
     cursor: pointer;
-    /* Pointer/hand icon */
     width: 100%;
     height: 50px;
     border-radius: 10px;
     margin-top: 55%;
     display: block;
-    /* Make the buttons appear below each other */
 }
 
 .btn-group2 button:not(:last-child) {
     border-bottom: none;
-    /* Prevent double borders */
 }
 
-/* Add a background color on hover */
+/*Div1 signout button hover  */
 .btn-group2 button:hover {
     background-color: rgb(222, 228, 222);
 }
 
 
+/*-----------------------------------------------------------------------------------------------------------------------------------" */
+
+
+/*Div2 settings on center  */
 .div2 {
     width: 30%;
     height: 670px;
@@ -150,6 +138,7 @@ h1 {
     border-radius: 20px;
 }
 
+/*Div2 h1"settings" */
 .div2 h1 {
     left: 0;
     right: 0;
@@ -160,6 +149,7 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*Div2 h1"general,acc,others" */
 .div2 h2 {
     left: 0;
     right: 0;
@@ -170,6 +160,9 @@ h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------------" */
+
+/*Div3 friends */
 .div3 {
     width: 20%;
     height: 450px;
@@ -182,11 +175,13 @@ h1 {
     color: gray;
     font-family: sans-serif;
 }
+
+/*Div3 h2"friends" */
 .div3 h2 {
     left: 0;
     right: 0;
     padding-left: 7%;
-    
+
     margin-top: 7%;
     display: flex;
     font-size: small;
@@ -194,6 +189,11 @@ h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
+/*-----------------------------------------------------------------------------------------------------------------------------------" */
+
+/*Div1 image all buttons home-cat-sett-profile */
+/*Div2 image all buttons genral-acc-other */
 .image-user {
     width: 6%;
     padding-left: 12px;
@@ -201,6 +201,8 @@ h1 {
     border-radius: 25px;
     padding-right: 5%;
 }
+
+/*Div3 image all friends */
 .image-user2 {
     width: 15%;
     padding-left: 12px;
@@ -208,6 +210,8 @@ h1 {
     border-radius: 25px;
     padding-right: 5%;
 }
+
+/*Div1 image signout */
 .image-out {
     width: 15%;
     padding-left: 7px;
@@ -215,6 +219,8 @@ h1 {
     padding-top: 1%;
     border-radius: 25px;
 }
+
+/*header-nav image profile(user) */
 .image-pro {
     width: 3%;
     padding-left: 7px;
