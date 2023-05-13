@@ -240,6 +240,8 @@ color: white;
 }
 .sb-logo{
 
-    width: 19px;
-    height: 19px;
+    width: 29px;
+    height: 29px;
+    border-radius: 75px;
+    margin: 2px;
 }
