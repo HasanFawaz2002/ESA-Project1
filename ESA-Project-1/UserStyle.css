@@ -95,6 +95,14 @@ margin-top: 2rem;
     height: fit-content;
 }
 
+.sb-logo{
+
+    width: 29px;
+    height: 29px;
+    border-radius: 75px;
+    margin: 2px;
+}
+
 /*Drop down*/
 
 .dropdown-container{
@@ -237,11 +245,4 @@ h5{
 background: #0055FF;
 border: transparent;
 color: white;
-}
-.sb-logo{
-
-    width: 29px;
-    height: 29px;
-    border-radius: 75px;
-    margin: 2px;
 }
