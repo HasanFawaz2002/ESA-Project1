@@ -289,4 +289,6 @@ background: linear-gradient(to bottom, #0055FF 50%, white 50%);
     height: 55px;
     border-radius: 75%;
     transform: translateY(118%);
+    background-color: white;
+  
 }
