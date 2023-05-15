@@ -1,6 +1,7 @@
 //icon drop down rotation
 let dropbtn1 = document.getElementById("drop-btn1");
 let dropicon1 = document.getElementById("drop-icon1");
+
 dropbtn1.addEventListener("click",()=>{
     dropicon1.classList.toggle("rotate");
 })
@@ -20,3 +21,5 @@ let dropicon4 = document.getElementById("drop-icon4");
 dropbtn4.addEventListener("click",()=>{
     dropicon4.classList.toggle("rotate");
 })
+
+
