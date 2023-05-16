@@ -1,5 +1,5 @@
 let loginBtn = document.getElementById("login");
-let signupBtn = document.getElementById("sinup");
+let signupBtn = document.getElementById("signup");
 
 let middle = document.getElementById("middle");
 let right = document.getElementById("right");
