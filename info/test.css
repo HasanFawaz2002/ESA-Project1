@@ -1,0 +1,150 @@
+
+body{
+  margin: 0;
+  padding: 0;
+    background: linear-gradient(135deg, rgba(158, 211, 255, 0.308),rgba(158, 211, 255, 0.678));
+}
+
+
+
+
+
+/* Nav Bar Style */
+nav {
+  background-color: white;
+ 
+  height: 4.5rem;
+}
+
+#btn {
+  background-color: lightblue;
+}
+
+#inp {
+  width: 400px;
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
+#item {
+  color: black;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-image {
+  border-radius: 50%;
+  width: 75px;
+  height: 50px;
+}
+
+#navbarsExample04 {
+  margin-left: 200px;
+}
+
+#item-container {
+  position: relative;
+  left: 10%;
+}
+
+.btn1,
+.btn2 {
+  border-radius: 20px;
+  margin-left: 40px;
+  background-color: white;
+  border: none;
+}
+
+
+
+
+
+
+.info{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 1px solid #90b5ff63;
+    margin: 80px 220px;
+    box-shadow: 2px 2px rgba(4, 39, 68, 0.349);
+    
+  }
+  .about-us{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin: 20px;
+    
+  }
+  .text0{
+    width: 70%;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+  }
+  .img0 {
+    margin-top: 5%;
+    width: 29%;
+    height: auto;
+   background-image: url(2.jpg);
+   box-shadow: 2px 2px rgba(4, 39, 68, 0.349);
+   border-radius:5px 15px 15px 5px ;
+  
+  }
+  .rules{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin: 20px
+  }
+  .img1{
+    background-image: url(sss.jpg);
+    width: 29%;
+    height: auto;
+    margin-right: 20px;
+    box-shadow: 2px 2px rgba(4, 39, 68, 0.349);
+    border-radius: 15px 5px 5px  15px ;
+  }
+  .text1{
+    margin: 10px;
+    width: 70%;
+    color: rgb(78, 92, 105);
+  }
+  p{
+    margin-left: 15px;
+  }
+ 
+
+
+
+
+  @media screen and (max-width: 745px) {
+    .about-us{
+      margin-top: 20px;
+      margin: 10px;
+      padding: 0;
+      width: 90%;
+      justify-content: center;
+    }
+    .img0,.img1{
+      display: none;
+      border: 1px solid black;
+    }
+    .text0,.text1{
+      width: 100%;
+      margin-right: 0;
+    }
+    .info{
+      margin: 3rem 0.5rem  ;
+      width: 100vw;
+      padding: 5px;
+      border: 1px solid #90b5ff63;
+      box-shadow: 2px 2px rgba(4, 39, 68, 0.349);
+    }
+    p{
+      margin-left: 5px;
+    }
+    }
