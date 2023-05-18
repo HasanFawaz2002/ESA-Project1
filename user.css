@@ -10,6 +10,9 @@ width: 365px;
   
   height: 55px;
   }
+  .navbar-nav p{
+    display: inline;
+  }
 @media (max-width: 576px){
   #smallsearch{
 transform: translateX(-164px);
