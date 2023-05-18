@@ -66,13 +66,13 @@ transform: translateX(78px);
       margin-right: 15px;
     }
     #smnavitem1{
-     transform: translateY(-14px)
+     transform: translateY(-35px)
     }
     #smnavitem2{
-      transform: translateY(-14px)
+      transform: translateY(-35px)
      }
      #smnavitem3{
-      transform: translateY(-14px)
+      transform: translateY(-35px)
      }
   }
 /*Carousel*/
