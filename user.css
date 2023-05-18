@@ -16,11 +16,24 @@ transform: translateX(-164px);
 width: 445px;
 
   }
+  #cat-word{
+    margin: 8px;
+  }
+  #set-word{
+    margin: 8px;
+  }
+  #home-word{
+    margin: 8px;
+  }
+  .navword p{
+    padding: 8px;
+  }
   #smallerscdiv{
   overflow: hidden;
   height: auto;
   }
   .nav-item{
+    padding:13px;
     transform: translateX(-55px);
   }
 }
