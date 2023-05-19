@@ -1,0 +1,212 @@
+body{
+    background-color: #FBFCFE;
+}
+.card{
+    text-align: center;
+width: 795px;
+height: 608px;
+left: 285px;
+right: 490px;
+top: 2281px;
+margin: 20%;
+
+background: #FFFFFF;
+box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+border-radius: 15px;
+
+}
+.cardhead{
+display: flex;
+
+width: 615px;
+height: 61px;
+left: 24px;
+top: 24px;
+
+}
+.cardicon{
+    
+    width: 45px;
+    height: 45px;
+    left: 0px;
+    top: calc(50% - 45px/2 - 8px);
+    
+    background: url(b.jpg);
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.075));
+    border-radius: 22.5px;
+    margin: 24px 16px 16px 24px;
+}
+.carduser{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+.cardname{
+    width: 107px;
+    height: 15px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    align-items: center;
+    color: #212529;
+
+
+}
+.cardtime{
+    width: 66px;
+    height: 17px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    align-items: center;
+    color: #ADB5BD;
+
+}
+.cardsetting{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    left: 540px;
+    top: 0px;
+    right: 0px;
+    background: #F5F5F5;
+    border-radius: 45px;
+    margin: 24px 24px 16px 0 ;
+}
+.carddot{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 14.5px;
+    top: 45px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+}
+.cardpost{
+   
+align-items: center;
+
+
+margin: 12px 24px;
+width: 747px;
+height: 420.19px;
+left: 24px;
+top: 85px;
+background: url(b.jpg);
+border-radius: 4.8px;
+overflow: hidden;
+}
+.cardcomment{
+left: 24px;
+right: 72px;
+top: 521.19px;
+height: 52px;
+width: 699px;
+left: 24px;
+margin-left: 24px;
+margin-right: 72px;
+border-radius: 0px;
+
+}
+.cardseemore{
+   
+    width: 59px;
+    height: 26px;
+    left: 468.59px;
+    top: 26px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    /* identical to box height, or 217% */
+    
+    
+    color: #1E74FD;
+    
+}
+.cardactive{
+    display: flex;
+    
+}
+.cardlike{ 
+      display: flex;
+    width: 127.53px;
+    height: 35px;
+    margin-left: 24px;
+    transform: translateX(5px) translateY(-5px);
+   
+}
+
+.cardiconsvg > button{
+    border: none;
+    background: none;
+
+    
+}
+.cardlikeiconnb{
+width: 100px;
+height: 26px;
+
+
+transform: translateX(5px) translateY(7px);
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 26px;
+/* identical to box height, or 217% */
+background: linear-gradient(180deg, #212529 0%, rgba(33, 37, 41, 0) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+
+
+}
+.cardcomments{
+    transform: translateX(15px);
+    display: flex;
+    height: 22.500003814697266px;
+    
+   
+    border: 3px solid  linear-gradient(90deg, rgba(48, 207, 208, 0.77) 0.72%, #330867 100.72%);;
+}
+.cardcommentsicon > button{
+    border: none;
+    background: none;
+
+}
+.cardcommentsnb{
+    transform: translateX(5px) translateY(4px);
+width: 92px;
+height: 26px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 26px;
+/* identical to box height, or 217% */
+
+
+background: linear-gradient(180deg, #212529 0%, rgba(33, 37, 41, 0) 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+
+}
+@media screen and (max-width :1050px ) {
+   .card{margin: 5%;} 
+   
+}
+
+@media screen and (max-width :850px ) {
+    .card{margin: 1%;} 
+ }
+ 
