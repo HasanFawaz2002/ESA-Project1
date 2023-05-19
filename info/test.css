@@ -67,8 +67,9 @@ nav {
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     border: 1px solid #90b5ff63;
-    margin: 80px 220px;
+    margin: 10% 10%;
     box-shadow: 2px 2px rgba(4, 39, 68, 0.349);
+
     
   }
   .about-us{
@@ -121,7 +122,7 @@ nav {
 
 
 
-  @media screen and (max-width: 745px) {
+  @media screen and (max-width: 800px) {
     .about-us{
       margin-top: 20px;
       margin: 10px;
@@ -131,7 +132,7 @@ nav {
     }
     .img0,.img1{
       display: none;
-      border: 1px solid black;
+      
     }
     .text0,.text1{
       width: 100%;
