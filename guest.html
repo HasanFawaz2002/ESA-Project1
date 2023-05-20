@@ -18,37 +18,38 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-md navbar-dark " aria-label="Fourth navbar example">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="nav-image" src="/images/Property_1_Default-removebg-preview.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img class="nav-image"
+                    src="/images/Property_1_Default-removebg-preview.png" alt=""></a>
             <h1 style="color:#0055FF; font-weight: bold;">Hangout</h1>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" id="btn" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarsExample04" >
+            <div class="collapse navbar-collapse" id="navbarsExample04">
                 <form role="search">
-                    <input class="form-control"  type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 </form>
 
                 <ul class="navbar-nav me-auto mb-2 mb-md-0" id="item-container">
-                   
                     <li class="nav-item">
-                        <button class="btn1"><a class="nav-link"  href="/Account.html" >Login</a></button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn2"><a class="nav-link"    href="/Account.html" >Sign Up</a></button>
+                        <button class="btn2"><a class="nav-link" href="/Account.html">Sign Up</a></button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div class="alert">
+        <i class='bx bx-x' id="close"></i>
+        <h1>Create Account First</h1>
+        <button><a href="/Account.html">Signup</a> </button>
+    </div>
+
 
     <div class="page-container" style="margin-left: 5px;">
-
-
         <!--Side Bar-->
-            <div class="sidebar-container"> 
-                <div  class="d-flex  flex-shrink-0 p-3 bg-body-tertiary"
+        <div class="sidebar-container">
+            <div class="d-flex  flex-shrink-0 p-3 bg-body-tertiary"
                 style=" border-radius: 25px; box-shadow: 0px 5px 10px black; ">
                 <ul class="nav nav-pills  mb-auto">
                     <li class="nav-item">
@@ -56,293 +57,175 @@
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#home"></use>
                             </svg>
-                            <img class="sb-logo" src="/images/i.feather-tv.jpg" style="border-radius: 50%;" alt="" srcset=""> Home
+                            <img class="sb-logo" src="/images/i.feather-tv.jpg" style="border-radius: 50%;" alt=""
+                                srcset=""> Home
                         </a>
                     </li>
-                    <li>
+                    <li id="alert1">
                         <a href="#" class="nav-link link-body-emphasis" style="color:black">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#speedometer2"></use>
                             </svg>
-                            <img class="sb-logo" src="/images/i.feather-globe.jpg" style="border-radius: 50%;" alt=""> Settings
+                            <img class="sb-logo" src="/images/i.feather-globe.jpg" style="border-radius: 50%;" alt="">
+                            Settings
                         </a>
                     </li>
-                    <li style="margin-bottom: 50px;">
+                    <li style="margin-bottom: 50px;" id="alert2">
                         <a href="#" class="nav-link link-body-emphasis" style="color:black">
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#table"></use>
                             </svg>
-                            <img class="sb-logo" src="/images/i.feather-zap.jpg" style="border-radius: 50%;" alt=""> Profile
+                            <img class="sb-logo" src="/images/i.feather-zap.jpg" style="border-radius: 50%;" alt="">
+                            Profile
                         </a>
                     </li>
 
                 </ul>
                 <hr>
             </div>
-            </div>
-
-
-
-
-        <!-- Middle container-->
-            <div class="content-container">
-                <!-- Carousel Story-->
-                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" >
-
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="card-container">
-                                <div class="card" style="background-color: black;">
-                                    <div class="img-container" style="background-color:white ;">
-                                    </div>
-                                    <h5>Add to story</h5>
-                                </div>
-                                <div class="card1">
-                                    <div class="img-container">
-                                        <img class="story-img" src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
-                                    </div>
-                                    <h5>Name</h5>
-                                </div>
-                                <div class="card2">
-                                    <div class="img-container">
-                                        <img class="story-img" src="images/elijah-hiett-vAVGdV1oklQ-unsplash.jpg"
-                                            alt="">
-                                    </div>
-                                    <h5>Name</h5>
-                                </div>
-                                <div class="card3">
-                                    <div class="img-container">
-                                        <img class="story-img" src="images/hassan-khan-EGVccebWodM-unsplash.jpg" alt="">
-                                    </div>
-                                    <h5>Name</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item ">
-                            <div class="card-container">
-                                <div class="card4">
-                                    <div class="img-container">
-                                        <img class="story-img" src="images/nora-hutton-tCJ44OIqceU-unsplash.jpg" alt="">
-                                    </div>
-                                    <h5>Name</h5>
-                                </div>
-                                <div class="card1">
-                                    <div class="img-container">
-                                        <img class="story-img" src="images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
-                                    </div>
-                                    <h5>Name</h5>
-                                </div>
-                                <div class="card2">
-                                    <div class="img-container">
-                                        <img class="story-img" src="images/elijah-hiett-vAVGdV1oklQ-unsplash.jpg"
-                                            alt="">
-                                    </div>
-                                    <h5>Name</h5>
-                                </div>
-                                <div class="card3">
-                                    <div class="img-container">
-                                        <img class="story-img" src="images/hassan-khan-EGVccebWodM-unsplash.jpg" alt="">
-                                    </div>
-                                    <h5>Name</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
-                            data-bs-slide="prev" style=" height: 50px;margin-top: 100px; ">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
-                            data-bs-slide="next" style=" height: 50px;margin-top: 100px;">
-                            <span class="">Next</span>
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
-                    </div>
-                
-
-                <!-- Create post container-->
-                <div class="create-post">
-                    <div class="header">
-                    <img src="" class="post-img" alt="">
-                    <p class="h5-post">Create Post</p>
-                    </div>
-                    <div class="post-content">
-                        <img class="field-img" src="images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
-                        <button class="field-btn">Create Post</button>
-                    </div>
-                </div>
-
-
-                <!--First Post-->
-                <div class="first-post">
-                    <div class="posts-header">
-                        <button class="posts-img-btn" style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img class="posts-img" src="images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt=""></button>
-                        <div class="posts-head">
-                            <p class="posts-text">Goria Cost</p>
-                            <p class="posts-text" style="display: inline;margin-top: 0; ">2 hours ago</p>
-                            <button class="posts-btn">...</button>
-                        </div>
-                    </div>
-                    <div class="posts-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at
-                            commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa
-                            sed rhoncus <span style="color: lightgray;margin-left:1rem;">see more</span>
-                        </p>
-                    </div>
-                    <div class="posts-footer">
-                        <img src="images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
-                        <img src="images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
-                        <button class="footer-text1">2.8 Like</button>
-                        <button class="footer-text2">22 comment</button>
-                        <button class="footer-text3">share</button>
-                    </div>
-                </div>
-
-                <!--Second Post-->
-                <div class="second-post">
-                    <div class="posts-header">
-                        <button class="posts-img-btn" style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img class="posts-img" src="images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt=""></button>
-                        <div class="posts-head">
-                            <p class="posts-text" >Goria Cost</p>
-                            <p class="posts-text" style="display: inline;margin-top: 0; ">3 hours ago</p>
-                            <button class="posts-btn">...</button>
-                        </div>
-                    </div>
-                    <div class="posts-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at
-                            commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa
-                            sed rhoncus <span style="color: lightgray;margin-left:1rem;">see more</span>
-                        </p>
-                    </div>
-                    <div class="posts-images-container">
-                        <img class="posts-img1" src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
-                        <img class="posts-img2" src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
-                        <img class="posts-img3" src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
-                    </div>
-                    <div class="posts-footer">
-                        <img src="/images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
-                        <img src="/images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
-                        <button class="footer-text1">2.8 Like</button>
-                        <button class="footer-text2">22 comment</button>
-                        <button class="footer-text3">share</button>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- Drop down-->
-            <div class="dropdown-container" style="box-shadow: 0px 5px 10px black;">
-                <center>
-                    <h4 style="margin-top: 5px;">Categories</h4>
-                </center>
-                <ul class="list-unstyled ps-0" >
-                    <li class="mb-1" >
-                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false"
-                            style="font-weight:bold ;" id="drop-btn1">
-                            <i class='bx bx-chevron-right' id="drop-icon1"></i> Sports
-                        </button>
-                        <div class="collapse" id="home-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">FootBall</a>
-                                </li>
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">BasketBall</a>
-                                </li>
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">Volley
-                                        Ball</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="mb-1">
-                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false"
-                            style="font-weight:bold ;" id="drop-btn2" >
-                            <i class='bx bx-chevron-right' id="drop-icon2"></i>Food
-                        </button>
-                        <div class="collapse" id="dashboard-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">Cooking</a>
-                                </li>
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">Recipes</a>
-                                </li>
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">Cooking
-                                        Tools</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="mb-1">
-                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false"
-                            style="font-weight:bold ;" id="drop-btn3">
-                            <i class='bx bx-chevron-right' id="drop-icon3"></i>Computers
-                        </button>
-                        <div class="collapse" id="orders-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">Computer
-                                        builds</a></li>
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">Programming</a>
-                                </li>
-                                <li><a href="#"
-                                        class="link-body-emphasis d-inline-flex text-decoration-none rounded">Ai</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="mb-1">
-                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                            data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false"
-                            style="font-weight:bold ;" id="drop-btn4">
-                            <i class='bx bx-chevron-right' id="drop-icon4"></i>Cars
-                        </button>
-                        <div class="collapse" id="account-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Super
-                                        Cars</a>
-                                </li>
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Car
-                                        Parts</a>
-                                </li>
-                                <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Normal
-                                        Cars</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
         </div>
 
 
 
 
+        <!-- Middle container-->
+        <div class="content-container">
+            <!--Carousel-->
+
+            <div class="wrapper col-12 " style=" margin-top: 15px;">
+
+                <ul class="carousel">
+                    <li class="card">
+                        <div class="img"><img src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
+                                style="width: 100%; height: 100%;" draggable="false"></div>
+                        <h2>Blanche Pearson</h2>
+                        <span>Sales Manager</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
+                                style="width: 100%; height: 100%;" draggable="false"></div>
+                        <h2>Joenas Brauers</h2>
+                        <span>Web Developer</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
+                                style="width: 100%; height: 100%;" draggable="false"></div>
+                        <h2>Lariach French</h2>
+                        <span>Online Teacher</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
+                                style="width: 100%; height: 100%;" draggable="false"></div>
+                        <h2>James Khosravi</h2>
+                        <span>Freelancer</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
+                                style="width: 100%; height: 100%;" draggable="false"></div>
+                        <h2>Kristina Zasiadko</h2>
+                        <span>Bank Manager</span>
+                    </li>
+                    <li class="card">
+                        <div class="img"><img src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg"
+                                style="width: 100%; height: 100%;" alt="img" draggable="false"></div>
+                        <h2>Donald Horton</h2>
+                        <span>App Designer</span>
+                    </li>
+                </ul>
+
+            </div>
 
 
 
 
+            <!-- Create post container-->
+            <div class="create-post">
+                <div class="header">
+                    <img src="" class="post-img" alt="">
+                    <p class="h5-post">Create Post</p>
+                </div>
+                <div class="post-content">
+                    <img class="field-img" src="images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
+                    <button class="field-btn">Create Post</button>
+                </div>
+            </div>
+
+
+            <!--First Post-->
+            <div class="first-post">
+                <div class="posts-header">
+                    <button class="posts-img-btn"
+                        style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
+                            class="posts-img" src="images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt=""></button>
+                    <div class="posts-head">
+                        <p class="posts-text">Goria Cost</p>
+                        <p class="posts-text" style="display: inline;margin-top: 0; ">2 hours ago</p>
+                        <button class="posts-btn">...</button>
+                    </div>
+                </div>
+                <div class="posts-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at
+                        commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa
+                        sed rhoncus <span style="color: lightgray;margin-left:1rem;">see more</span>
+                    </p>
+                </div>
+                <div class="posts-footer">
+                    <img src="images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
+                    <img src="images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
+                    <button class="footer-text1">2.8 Like</button>
+                    <button class="footer-text2">22 comment</button>
+                    <button class="footer-text3">share</button>
+                </div>
+            </div>
+
+            <!--Second Post-->
+            <div class="second-post">
+                <div class="posts-header">
+                    <button class="posts-img-btn"
+                        style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
+                            class="posts-img" src="images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt=""></button>
+                    <div class="posts-head">
+                        <p class="posts-text">Goria Cost</p>
+                        <p class="posts-text" style="display: inline;margin-top: 0; ">3 hours ago</p>
+                        <button class="posts-btn">...</button>
+                    </div>
+                </div>
+                <div class="posts-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at
+                        commodo non, feugiat non nisi. Phasellus faucibus mollis pharetra. Proin blandit ac massa
+                        sed rhoncus <span style="color: lightgray;margin-left:1rem;">see more</span>
+                    </p>
+                </div>
+                <div class="posts-images-container">
+                    <img class="posts-img1" src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
+                    <img class="posts-img2" src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
+                    <img class="posts-img3" src="/images/austin-wade-X6Uj51n5CE8-unsplash.jpg" alt="">
+                </div>
+                <div class="posts-footer">
+                    <img src="/images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
+                    <img src="/images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
+                    <button class="footer-text1">2.8 Like</button>
+                    <button class="footer-text2">22 comment</button>
+                    <button class="footer-text3">share</button>
+                </div>
+            </div>
+        </div>
 
 
 
-
+        <!-- Right Container (Friend List)-->
+        <div class="friendlist-container">
+            <h1>Friend List</h1><hr>
+            <h3>Create Account To make Friends</h3>
+            <button><a href="/account.html">Signup</a></button>
+          </div>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
 
-            <script src="/main.js"></script>
+        <script src="/main.js"></script>
 </body>
 
 </html>

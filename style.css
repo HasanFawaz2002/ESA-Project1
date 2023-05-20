@@ -6,6 +6,7 @@ body{
 nav{
     background-color: white;
     height: 4.5rem;
+    margin-bottom: 0;
 
 }
 #btn{
@@ -32,13 +33,59 @@ left: 10%;
 .btn1,.btn2{
     color: white;
     border-radius: 20px;
-    margin-left: 70px;
+    margin-left: 150px;
     background-color: #0055FF;
     border: transparent;
 }
 .nav-link{
     color: white;
 }
+
+/*Alert style */
+.alert{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #0055FF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.23);
+    z-index: 1;
+  }
+  .alert i{
+    margin-left: 90%;
+    font-size: large;
+    cursor: pointer;
+  }
+  .alert h1{
+    color: white;
+    margin-bottom: 5rem;
+  }
+  .alert button{
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #0055FF;
+    padding: 0.5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: all ease 400ms;
+    cursor: pointer;
+  }
+  .alert button a{
+    text-decoration: none;
+    color: white;
+  }
+  .alert button:hover{
+    color: #0055FF;
+    background-color: white;
+    border: 0.5px solid #0055FF;
+  }
+  .alert button:hover a{
+    color: #0055FF;
+  }
 
 
 
@@ -47,7 +94,7 @@ left: 10%;
 
 .page-container{
 display: grid;
-grid-template-columns: 20% 60% 16%;
+grid-template-columns: 20% 55% 22%;
 margin-top: 2rem;
 position: relative;
 }
@@ -71,28 +118,7 @@ position: relative;
 
 /*Drop down*/
 
-.dropdown-container{
-    position: absolute;
-    right: -100px;
-    margin-right: 9%;
-    width: 12%;
-    height: fit-content;
-    background-color: white;
-    border-radius: 25px;
-}
 
-.dropdown-container ul li {
-    margin: 20px 10px 0 10px;
-}
-.rotate{
-    transform: rotate(90deg);
-}
-.btn-toggle{
-width: 100%;
-}
-.btn-toggle:hover{
-    background: lightgray;
-}
 
 /* Middle container */
 
@@ -105,69 +131,156 @@ width: 100%;
 
 
 
-.card-container{
-    display: flex;
-}
-.card,.card1,.card2,.card3,.card4{
-    margin-left: 1rem;
-    border-radius: 25px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+.wrapper {
+    max-width: 655px;
     position: relative;
-    width: 200px;
-    height: 230px;
-}
-.card h5{
-    width: 60%;
-}
-h5{
-    color: white;
+  }
+  .wrapper i {
+    
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
     position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 9%;
-}
-.img-container{
-    transform: translateX(-50%);
-    bottom: 23%;
-    left: 50%;
-    width: 70px;
-    height: 70px;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
     border-radius: 50%;
-    position: absolute;
-}
-.story-img{
-    width: 70px;
-    height: 70px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) );
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel .card .img {
+    background: #8B53FF;
+    height: 148px;
+    width: 148px;
     border-radius: 50%;
-}
-.card1{
-    background: url("/images/austin-wade-X6Uj51n5CE8-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.card2{
-    background: url("/images/elijah-hiett-vAVGdV1oklQ-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.card3{
-    background: url("/images/hassan-khan-EGVccebWodM-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.card4{
-    background: url("/images/nora-hutton-tCJ44OIqceU-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
+  }
+  .card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+  
+  @media screen and (max-width: 550px) {
+    .wrapper,.carousel  {
+        width: 100%;
+        grid-auto-columns: 23%;
+    }
+    .card .img img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: none;
+      }
+      .carousel .card {
+        scroll-snap-align: start;
+        height: 142px;
+        list-style: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding-bottom: 15px;
+        flex-direction: column;
+        border-radius: 8px;
+      }
+      .carousel .card span {
+      display: none;
+      
+        
+      }
+      .carousel .card h2 {
+        font-weight: 500;
+        font-size: .8rem;
+        margin: 30px 0 5px;
+        display: none;
+      }
+      .carousel .card .img {
+        border: 1px solid red;
+        background: #8B53FF;
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        
+      }
+      ul{
+        width: 549px;
+        margin: 0;
+      }
+   
+  }
+  
+  
 
 /* Create Post Section */
 
 .create-post{
     position: relative;
     background: white;
-    margin-top: 2rem;
-    width: 100%;
+    width: 90%;
     height: 500px;
     border-radius: 25px;
 }
@@ -226,7 +339,7 @@ color: white;
 
 .first-post{
     height: 400px;
-    width: 100%;
+    width: 90%;
     border-radius: 25px;
     margin-top: 2rem;
     background-color: white;
@@ -268,6 +381,7 @@ color: white;
 .footer-text1,.footer-text2,.footer-text3{
     font-weight: bold;
     margin: 0;
+    margin-left: 1.5rem;
     border: 1px solid #0055FF;
     background: white;
     color: #0055FF;
@@ -279,21 +393,13 @@ color: white;
     background-color: #0055FF;
     color: white;
 }
-.footer-text1{
-    margin-left: 1rem;
-}
-.footer-text2{
-    margin-left: 4rem;
-}
-.footer-text3{
-    margin-left: 25rem;
-}
+
 
 
 /* Second post container */
 .second-post{
     height: 600px;
-    width: 100%;
+    width: 90%;
     background-color: white;
     border-radius: 25px;
     margin-top: 2rem;
@@ -309,17 +415,17 @@ margin: 0 1% 0 1%;
 border-radius: 25px;
 }
 @media (max-width:600px) {
+    
     .page-container{
         grid-template-columns: 1fr;
+        width: 100%;
     }
     .sidebar-container{
         display: none;
     }
-    .dropdown-container{
-        display: none;
-    }
+    
     .content-container{
-        width: 95%;
+        width: 100%;
     }
     
     #item{
@@ -352,4 +458,56 @@ border-radius: 25px;
     .container-fluid{
         z-index: 1;
     }
+    .create-post,.first-post,.second-post{
+        width: 100%;
+        height: fit-content;
+    }
+    .posts-footer{
+        margin-bottom: 1.5rem;
+    }
+    .posts-btn{
+        margin-left: 15rem;
+    }
+}
+
+
+/* Freind List Style */
+.friendlist-container{
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.friendlist-container h1,.friendlist-container h3{
+  color:  #0055FF;
+}
+.friendlist-container button{
+  position: absolute;
+  padding: 0.5rem;
+  background-color: #0055FF;
+  border: transparent;
+  border-radius: 10px;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+.friendlist-container button:hover{
+  background-color: white;
+  border: 0.5px solid #0055FF;
+}
+.friendlist-container button:hover a{
+  color: #0055FF;
+}
+.friendlist-container a{
+  text-decoration: none;
+  color: white;
+}
+@media (max-width:740px){
+  .friendlist-container{
+    display: none;
+  }
 }
