@@ -1,0 +1,164 @@
+body{
+    background-color: #bfeeed;
+}
+/*navbar*/
+#smallsearch{
+  margin-left:155px; 
+width: 365px;
+}
+#smallerscdiv{
+  
+  height: 90px;
+  }
+  .navbar-nav p{
+    display: inline;
+  }
+
+
+/* page container */
+.page-conatiner{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    margin: 20px;
+    height: 100%;
+}
+
+/* Middle container*/
+.middle-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 10px;
+    height: 100%;
+}
+form{
+    display: grid;
+    margin: 20px;
+}
+
+form input{
+    margin-top: 2rem;
+    border: 2px solid #0055FF;
+    line-height: 1.7rem;
+    border-radius: 5px;
+
+}
+input:focus {
+    outline: none;
+}
+
+form button{
+    margin-top: 2rem;
+    padding: 0.5rem;
+    width: fit-content;
+    justify-self: center;
+    color: white;
+    background-color: #0055FF;
+    border: none;
+    border-radius: 10px;
+}
+
+form button:hover{
+    color: #0055FF;
+    background-color: transparent;
+    border: 0.5px solid #0055FF;
+}
+
+.middle-container a{
+    justify-self: end;
+}
+
+
+@media (max-width: 576px){
+  #smallsearch{
+transform: translateX(-164px);
+width: 445px;
+
+  }
+  #cat-word{
+    margin: 8px;
+  }
+  #set-word{
+    margin: 8px;
+  }
+  #home-word{
+    margin: 8px;
+  }
+  .navword p{
+    padding: 8px;
+  }
+  #smallerscdiv{
+  overflow: hidden;
+  height: auto;
+  }
+  .nav-item{
+    padding:13px;
+    transform: translateX(-55px);
+  }
+  .page-conatiner{
+    grid-template-columns: 1fr;
+  }
+  .middle-container a {
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+/*sidebar*/
+
+ul li{
+   
+    padding: 15px;
+  }
+
+
+  
+  @media (max-width: 576px) {
+    .side-bar-container {
+      overflow: hidden;
+      position: fixed;
+      height: 55px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    #sidebarflex {
+      height: 15px;
+    }
+  span{
+    color: transparent;
+  }
+.smallersc{
+transform: translateX(38px);
+  }
+    .nav-link {
+      display: flex;
+      align-items: center;
+    }
+  
+    .nav-link .smallersc {
+      margin-right: 15px;
+    }
+    #smnavitem1{
+     transform: translateY(-25px)
+    }
+    #smnavitem2{
+      transform: translateY(-25px)
+     }
+     #smnavitem3{
+      transform: translateY(-25px)
+     }
+  }
