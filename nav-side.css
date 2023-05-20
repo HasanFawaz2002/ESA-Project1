@@ -1,0 +1,107 @@
+* Content Layout ---------------------------------------------------------------------------------------*/
+.page-container {
+    display: flex;
+    grid-template-columns: 20% 60% 16%;
+    margin-top: 2rem;
+  }
+  /* nav bar */
+  #smallsearch{
+    margin-left:155px; 
+  width: 365px;
+  }
+  #smallerscdiv{
+    
+    height: 55px;
+    }
+    .navbar-nav p{
+      display: inline;
+    }
+  @media (max-width: 576px){
+    #smallsearch{
+  transform: translateX(-160px);
+  width: 445px;
+  
+    }
+    #cat-word{
+      margin: 8px;
+    }
+    #set-word{
+      margin: 8px;
+    }
+    #home-word{
+      margin: 8px;
+    }
+    .navword p{
+      padding: 8px;
+    }
+    #smallerscdiv{
+    overflow: hidden;
+    height: auto;
+    }
+    .nav-item{
+      padding:13px;
+      transform: translateX(-10px);
+    }
+  }
+   /* Side Bar --------------------------------------------------------------------------------------------------*/
+   ul li{
+     
+    padding: 15px;
+  }
+  
+  
+  
+  @media (max-width: 576px) {
+    .side-bar-container {
+      overflow: hidden;
+      position: fixed;
+      height: 55px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f8f9fa;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  
+    #sidebarflex {
+      height: 15px;
+    }
+  span{
+    color: transparent;
+  }
+  .smallersc{
+  transform: translateX(78px);
+  }
+    .nav-link {
+      display: flex;
+      align-items: center;
+    }
+  
+    .nav-link .smallersc {
+      margin-right: 15px;
+    }
+    #smnavitem1{
+     transform: translateY(-14px)
+    }
+    #smnavitem2{
+      transform: translateY(-14px)
+     }
+     #smnavitem3{
+      transform: translateY(-14px)
+     }
+  }
+    /*settings main -------------------------------------------------------------------------------------------------*/
+    #Settings-main{
+        display: flex;
+        padding: 15px;
+        flex-direction: column;
+        border-radius: 9px;
+      }
+      

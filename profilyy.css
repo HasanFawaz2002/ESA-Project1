@@ -1,0 +1,432 @@
+
+/* Content Layout ---------------------------------------------------------------------------------------*/
+.page-container {
+   
+    grid-template-columns: 20% 60% 16%;
+    margin-top: 2rem;
+  }
+  /* nav bar */
+  #smallsearch{
+    margin-left:155px; 
+  width: 365px;
+  }
+  #smallerscdiv{
+    
+    height: 55px;
+    }
+    .navbar-nav p{
+      display: inline;
+    }
+  @media (max-width: 576px){
+    #smallsearch{
+  transform: translateX(-160px);
+  width: 445px;
+  
+    }
+    #cat-word{
+      margin: 8px;
+    }
+    #set-word{
+      margin: 8px;
+    }
+    #home-word{
+      margin: 8px;
+    }
+    .navword p{
+      padding: 8px;
+    }
+    #smallerscdiv{
+    overflow: hidden;
+    height: auto;
+    }
+    .nav-item{
+      padding:13px;
+      transform: translateX(-10px);
+    }
+  }
+  
+  /*settings main -------------------------------------------------------------------------------------------------*/
+  #Settings-main{
+    display: grid;
+    padding: 15px;
+    flex-direction: column;
+    margin-left: 10%;
+    border-radius: 9px;
+  }
+  
+  /* profile photo // username // link// interests....------------------------------------------------------------------------------*/
+  #img {
+    border-radius: 60%;
+  
+    
+  }
+  
+  #h1{
+  padding-bottom: 10px;
+  }
+  .div1{
+  display: flex;
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 5%;
+  
+    
+    
+  }
+  .continer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .div2{
+   
+    margin-right: 5%;
+    margin-left: 9%;
+    margin-top: 3%;
+  }
+  .div3{
+    margin-top: 3%;
+    margin-left: 9%;
+    margin-bottom: 2%;
+  }
+  .div3 button{
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  transition: all ease 400ms;
+  }
+  .div3 button:hover{
+    background-color: #0055ff;
+    border: none;
+  }
+  .div3 p{
+    display: inline-flex;
+    padding-right: 15px;
+    color: black;
+  }
+  .div3 strong{
+    padding-right: 5px;
+  }
+  .divnew{
+    display: grid;
+    margin: 3%;
+  }
+  .desc{
+    border-radius: 30px;
+    width: 300px;
+  }
+  .imgpo{
+    width: 750px;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow:  6px 10px rgb(0 0 0 / 0.2);
+  }
+  .imgpo img{
+    margin: 1%;
+    width:680px;
+       border-radius: 10px;
+        height: 200px;
+  }
+  .cardhead{
+    display: flex;
+    height: 61px;
+    left: 24px;
+    
+    }
+    .cardicon{
+        
+        width: 45px;
+        height: 45px;
+        left: 0px;
+        background: url(iiii.jpeg);
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.075));
+        border-radius: 22.5px;
+    }
+    .carduser{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 9px;
+        margin-top: 5px;
+    }
+    .cardname{
+        width: 107px;
+        height: 15px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        align-items: center;
+        color: #212529;
+    
+    
+    }
+    .cardtime{
+        width: 66px;
+        height: 17px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 17px;
+        align-items: center;
+        color: #ADB5BD;
+    
+    }
+    .cardseemore{
+      color: #0055ff;
+    }
+  .buttonsvg {
+    
+   
+   border-radius: 10px;
+   border: none;
+   background: none;
+  
+  }
+  .buttonimg{
+
+  justify-content: space-around;
+    display: flex;
+   width: 300px;
+  }
+
+  /* Styles for desktop screens -------------------------------------------------------------------------------------------------*/
+  @media (min-width: 992px) {
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: white;
+      box-shadow: 0.3px 0.3px 0.3px rgb(53, 51, 51);
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      height: 4.5rem;
+  
+  
+    }
+    #item-container {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      left: 10%;
+    }
+    .side-bar-container {
+      height: fit-content;
+    }
+  
+    #Settings-main{
+      display: flex;
+      padding: 15px;
+      flex-direction: column;
+      border-radius: 9px;
+    }
+  
+    .div1{
+      display: flex;
+    
+      background-color: white;
+      border-radius: 15px;
+      width: 65%;
+      margin-left: 5%;
+      
+    }
+    .divnew{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 3%;
+      
+    }
+  
+  
+  }
+  
+  
+  /* Styles for tablet screens----------------------------------------------------------------------------------------------------- */
+  @media (min-width: 768px) and (max-width: 991px) {
+    
+    .side-bar-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+      align-content: stretch;
+    }
+  
+    #Settings-main{
+      display: flex;
+      padding: 15px;
+      border-radius: 9px;
+    }
+  
+    .div1{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: white;
+      border-radius: 15px;
+      width: auto;
+      margin-left: 5%;
+      
+    }
+    .div2{
+      display: flex;
+      flex-wrap: wrap;
+      width: 10px;
+    }
+    .div3{
+      display: grid;
+      margin-top: 3%;
+      margin-left: 17%;
+      margin-bottom: 2%;
+    }
+    .div3 h1{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .div3 small{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .div3 a{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .div3 button{
+      width: fit-content;
+    }
+   
+    #img{
+    display: flex;
+      width:10px;
+      
+    }
+    .desc{
+      border-radius: 30px;
+      width: auto;
+    }
+    .imgpo{
+      flex-wrap: wrap;
+      margin: 2%;
+      padding: 2%;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow:  6px 10px rgb(0 0 0 / 0.2);
+      
+    }
+    .buttonsvg {
+      justify-content: space-around;
+     background-color: none;
+     border: none;
+     margin-bottom: 7%;
+    }
+    
+  
+  }
+  
+  /* Styles for mobile screens -------------------------------------------------------------------------------------------------------*/
+  @media (max-width: 767px) {
+    
+    .home-logo{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .btn2{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .nav-link{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .side-bar-container {
+      
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        align-content: stretch;
+      
+    }
+  
+    #Settings-main{
+      display: flex;
+      margin-left: 2%;
+      flex-wrap: wrap;
+      padding: 15px;
+      flex-direction: column;
+      border-radius: 9px;
+    }
+  
+    .div1{
+      display: grid;
+      margin-left: 0;
+    background-color: white;
+    border-radius: 15px;
+    width: 95%;
+      
+      
+    }
+    .div2{
+      display: flex;
+      flex-wrap: wrap;
+      width: 10px;
+    }
+    .div3{
+      display: grid;
+      margin-top: 3%;
+      margin-left: 9%;
+      margin-bottom: 2%;
+    }
+    .div3 h1{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .div3 small{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .div3 a{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .div3 button{
+      width: fit-content;
+    }
+    .divnew{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 3%;
+      
+    }
+   .desc{
+        border-radius: 30px;
+        width: auto;
+      }
+      .imgpo{
+        flex-wrap: wrap;
+        margin: 2%;
+        padding: 2%;
+        width: 100%;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow:  6px 10px rgb(0 0 0 / 0.2);
+      }
+      .imgpo img{
+        width: 100%;
+      }
+      .buttonsvg {
+        justify-content: space-around;
+       background-color: none;
+       border: none;
+       margin-bottom: 7%;
+      }
+    }
+    
+  
+  
