@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comment System</title>
+</head>
+<body>
+  <h1>Comment System</h1>
+  
+  <!-- Comment Form -->
+  <form id="commentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="comment">Comment:</label><br>
+    <textarea id="comment" name="comment" required></textarea><br>
+    <input type="submit" value="Post Comment">
+  </form>
+  
+  <!-- Comment Section -->
+  <div id="comments">
+    <!-- Comments will be dynamically added here -->
+  </div>
+  
+  <script>
+    // Function to handle form submission
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Get form values
+      var name = document.getElementById('name').value;
+      var comment = document.getElementById('comment').value;
+      
+      // Create a new comment element
+      var newComment = document.createElement('div');
+      newComment.classList.add('comment');
+      newComment.innerHTML = '<h4>' + name + '</h4><p>' + comment + '</p>';
+      
+      // Append the new comment to the comments section
+      document.getElementById('comments').appendChild(newComment);
+      
+      // Clear the form fields
+      document.getElementById('name').value = '';
+      document.getElementById('comment').value = '';
+    });
+  </script>
+  
+  <style>
+    /* Optional CSS styling for comments */
+    .comment {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    
+    h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+    
+    p {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  </style>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<title>friends lest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="friendslest.css">
+
+<body>
+
+
+  <button id="open-modal">Open Modal</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <ul class="tab-navigation">
+        <li class="tab active">  Follwing  </li>
+        <li class="tab">  Follwers  </li>
+        <li class="tab">  Suggested For You  </li>
+      </ul>
+      
+      <div class="tab-content">
+        <div class="tab-pane active">
+            <div class="user"> <div class="usericon"></div> <div class="username">Ezalden S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Mohamad F</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Hassan F</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Ginna S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Ali M</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Mallak S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Naddin S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Ezalden S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Mohamad F</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Hassan F</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Ginna S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Ali M</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Mallak S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Naddin S</div>  </div>
+        </div>
+        
+        <div class="tab-pane"> 
+            <div class="user"> <div class="usericon"></div> <div class="username">Ali M</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Ginna S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Naddin S</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Mohamad F</div>  </div>
+            <div class="user"> <div class="usericon"></div> <div class="username">Hassan F</div>  </div>
+            
+            
+           
+        </div>
+        
+        <div class="tab-pane">
+          
+          <div class="user"> <div class="usericon"></div> <div class="username">Hassan F</div>  </div>
+          <div class="user"> <div class="usericon"></div> <div class="username">Ali M</div>  </div>
+          <div class="user"> <div class="usericon"></div> <div class="username">Ginna S</div>  </div>
+          <div class="user"> <div class="usericon"></div> <div class="username">Mallak S</div>  </div>
+          <div class="user"> <div class="usericon"></div> <div class="username">Ezalden S</div>  </div>
+          <div class="user"> <div class="usericon"></div> <div class="username">Naddin S</div>  </div>
+            
+            
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  const openModalBtn = document.getElementById("open-modal");
+const modal = document.getElementById("modal");
+const closeBtn = document.querySelector(".close");
+const tabs = document.querySelectorAll(".tab");
+const tabContents = document.querySelectorAll(".tab-pane");
+
+openModalBtn.addEventListener("click", function() {
+  modal.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+tabs.forEach(function(tab, index) {
+  tab.addEventListener("click", function() {
+    // Remove active class from all tabs
+    tabs.forEach(function(tab) {
+      tab.classList.remove("active");
+    });
+
+    // Hide all tab contents
+    tabContents.forEach(function(content) {
+      content.classList.remove("active");
+    });
+
+    // Set the selected tab as active
+    tab.classList.add("active");
+
+    // Show the selected tab content
+    tabContents[index].classList.add("active");
+  });
+});
+
+</script>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!--
+<div class="w3-container">
+<h2>Frends skills</h2>
+<p>In this example we add tabbed content inside the modal.</p>
+</div>
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Tabbed Modal</button>
+
+
+
+<div id="id01" class="w3-modal" >
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width: 50% !important;">
+  <header class="w3-container w3-blue"> 
+   <span onclick="document.getElementById('id01').style.display='none'" 
+   class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+   <center><h2>Frends Skills</h2></center>
+  </header>
+<div class="all">
+  <div class="w3-bar w3-border-bottom">
+   <center><button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'London')">Following</button></center>
+   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Paris')">Follwers</button>
+   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Tokyo')">Suggested For You</button>
+  </div>
+
+  <div id="London" class="w3-container city">
+   <div class="user"> <div class="usericon"></div> <div class="username">Ezalden S</div>  </div>
+   <div class="user"> <div class="usericon"></div> <div class="username">Mohamad F</div>  </div>
+   <div class="user"> <div class="usericon"></div> <div class="username">Hassan F</div>  </div>
+   <div class="user"> <div class="usericon"></div> <div class="username">Ginna S</div>  </div>
+   <div class="user"> <div class="usericon"></div> <div class="username">Ali M</div>  </div>
+   <div class="user"> <div class="usericon"></div> <div class="username">Mallak S</div>  </div>
+   <div class="user"> <div class="usericon"></div> <div class="username">Naddin S</div>  </div>
+
+  
+  </div>
+
+  <div id="Paris" class="w3-container city">
+    <div class="user"> <div class="usericon"></div> <div class="username">Ezalden S</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Mohamad F</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Hassan F</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Ginna S</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Ali M</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Mallak S</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Naddin S</div>  </div>
+ 
+  </div>
+
+  <div id="Tokyo" class="w3-container city">
+    <div class="user"> <div class="usericon"></div> <div class="username">Ezalden S</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Mohamad F</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Hassan F</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Ginna S</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Ali M</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Mallak S</div>  </div>
+    <div class="user"> <div class="usericon"></div> <div class="username">Naddin S</div>  </div>
+  
+  </div>
+
+  <div class="w3-container w3-light-grey w3-padding">
+   <button class="w3-button w3-right w3-white w3-border" 
+   onclick="document.getElementById('id01').style.display='none'">Close</button>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+
+<script>
+document.getElementsByClassName("tablink")[0].click();
+
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].classList.remove("w3-light-grey");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.classList.add("w3-light-grey");
+}
+</script>-->
+ 
+</body>
+</html> 
