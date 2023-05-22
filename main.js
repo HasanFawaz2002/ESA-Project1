@@ -110,27 +110,7 @@ wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
 
-//Alert toggle
-let alertBtn1 = document.getElementById("alert1");
-let alertBtn2 = document.getElementById("alert2")
-let alertcontainer = document.querySelector(".alert");
-let closeBtn = document.getElementById("close");
-let pagecontainer = document.querySelector(".page-container");
 
-alertBtn1.addEventListener("click",()=>{
-  alertcontainer.style.display = "block";
-  pagecontainer.style.opacity = 0.2;
-});
-
-alertBtn2.addEventListener("click",()=>{
-    alertcontainer.style.display = "block";
-    pagecontainer.style.opacity = 0.2;
-  });
-
-closeBtn.addEventListener("click",()=>{
-  alertcontainer.style.display = "none";
-  pagecontainer.style.opacity = 1;
-})
 
 
 //Comments Modal

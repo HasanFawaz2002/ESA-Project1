@@ -1,20 +1,24 @@
 body{
     background-color: #E8F1FA;
+    margin: 0;
+    padding: 0;
 }
 /* Nab Bar Style */
 
 nav{
     background-color: white;
     height: 4.5rem;
-    margin-bottom: 0;
-
+    z-index: 1;
+    width: 100%;
+    top: 0;
 }
+
 #btn{
     background-color: lightblue;
 }
 .form-control{
     width: 400px;
-    margin-right: 10px;
+    margin-right: 5px;
     margin-left: 10px;
 }
 
@@ -29,63 +33,31 @@ nav{
 #item-container{
 position: relative;
 left: 10%;
+align-items: center;
 }
 .btn1,.btn2{
     color: white;
     border-radius: 20px;
-    margin-left: 150px;
+    margin-left: 10px;
     background-color: #0055FF;
     border: transparent;
+    padding: 10px;
 }
-.nav-link{
+.nav-link {
     color: white;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.nav-link1{
+  text-decoration: none;
+  margin-left: 10px;
+  margin-top: 35px;
+}
+.nav-link1 svg{
+  margin-right: 5px;
 }
 
-/*Alert style */
-.alert{
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #0055FF;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.23);
-    z-index: 1;
-  }
-  .alert i{
-    margin-left: 90%;
-    font-size: large;
-    cursor: pointer;
-  }
-  .alert h1{
-    color: white;
-    margin-bottom: 5rem;
-  }
-  .alert button{
-    color: white;
-    border: transparent;
-    border-radius: 10px;
-    background-color: #0055FF;
-    padding: 0.5rem;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    transition: all ease 400ms;
-    cursor: pointer;
-  }
-  .alert button a{
-    text-decoration: none;
-    color: white;
-  }
-  .alert button:hover{
-    color: #0055FF;
-    background-color: white;
-    border: 0.5px solid #0055FF;
-  }
-  .alert button:hover a{
-    color: #0055FF;
-  }
+
 
 
 
@@ -95,28 +67,77 @@ left: 10%;
 .page-container{
 display: grid;
 grid-template-columns: 20% 55% 22%;
-margin-top: 2rem;
+grid-template-areas:
+      "sidebar content friendlist";
+margin-top: 6rem;
 position: relative;
 }
 
 /* Side Bar */
 
-.d-flex li{
-    margin-bottom: 5px;
-    transform: translateX(-25%);
-}
-.d-flex{
-    width: 200px;
+.dropdown-container{
+    margin-top: 10px;
+    grid-area: sidebar;
+    position: absolute;
     height: fit-content;
-    margin-left: 2rem;
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;
+    margin-left: 5px;
+    z-index: 1;
 }
 
-.sb-logo{
-    width: 30px;
-    height: 30px;
+.dropdown-container span{
+margin-left: 5px;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+.dropdown-container ul li {
+    margin: 20px 10px 0 10px;
+}
+@media screen and (max-width: 700px) {
+
+
+  .dropdown-container{
+    grid-area: content;
+      bottom: 0%;
+      width: 100%;
+      position: fixed;
+      border: 1px solid lightgrey;
+      height: 65px;
+      margin-left: 0;
+      left: 0;
+  }
+
+
+  .mb-1 button svg{
+    margin-left: 0;
+    margin-right: 0;
+   
+  }
+  #car-logo{
+    transform: translate(-30px,-6px);
+  }
+
+.dropdown-container span{
+  display: none;
+}
+.dropdown-container li svg{
+  margin-right: 15px;
+}
+  .dropdown-container>h4{
+   display: none;
+  }
+.dropdown-container>ul{
+  justify-content: space-between;
+  display: flex;
+}
+.dropdown-container>li{
+  font-size: small;
 }
 
-/*Drop down*/
+}
 
 
 
@@ -124,6 +145,8 @@ position: relative;
 
 .content-container{
     display: grid;
+    grid-area: content;
+    margin-left: 1.5rem
 }
 
 
@@ -420,12 +443,10 @@ border-radius: 25px;
         grid-template-columns: 1fr;
         width: 100%;
     }
-    .sidebar-container{
-        display: none;
-    }
     
     .content-container{
         width: 100%;
+        margin-left: 0;
     }
     
     #item{
@@ -434,11 +455,15 @@ border-radius: 25px;
     }
     .nav-item{
         margin-bottom: 1rem;
+        margin-top: 0.2rem;
     }
     
     .btn1,.btn2{
-        margin-left: 6rem;
         background-color: transparent;
+        color: #0055FF;
+    }
+    #item-container{
+      align-items: flex-start;
     }
     .nav-link{
         color: #0055FF;
@@ -474,6 +499,7 @@ border-radius: 25px;
 /* Freind List Style */
 .friendlist-container{
   position: relative;
+  grid-area: friendlist;
   background-color: white;
   width: 100%;
   height: 400px;
