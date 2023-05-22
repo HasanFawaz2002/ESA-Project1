@@ -93,7 +93,7 @@ wrapper.addEventListener("mouseleave", autoPlay);
 
 
 const apiKey = "2d27ba7852d8a8a569a63feba802ac72";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&lat={lat}&lon={lon}&appid=" + apiKey;7
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&lat={lat}&lon={lon}&appid=" + apiKey;
 
 
 const searchBox=document.querySelector(".search-weather input");

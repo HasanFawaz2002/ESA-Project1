@@ -93,7 +93,7 @@ overflow: hidden;
 /*main grid*/
 .main {
     display: grid;
-    grid-template-columns: 15% 65% 20%;
+    grid-template-columns: 20% 55% 22%;
     grid-template-rows: auto;
     grid-template-areas:
       "sidebar content friendlist";
@@ -189,7 +189,7 @@ transform: translateY(-6px);
 .wrapper .carousel{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
+  grid-auto-columns: calc((100% / 3));
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
@@ -218,7 +218,7 @@ transform: translateY(-6px);
 }
 .carousel .card {
   scroll-snap-align: start;
-  height: 242px;
+  height: 342px;
   list-style: none;
   background: #fff;
   cursor: pointer;
@@ -235,8 +235,8 @@ transform: translateY(-6px);
 
 }
 .card .img img {
-  width: 128px;
-  height: 138px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
  
@@ -299,7 +299,11 @@ transform: translateY(-6px);
     border: 1px solid rgb(248, 15, 15);
   
   }
-
+#wimage{
+  width: 75px;
+  height: 75px;
+  border: 1px solid rgb(248, 15, 15);
+}
 }
 /*carousel ends here*/
 
@@ -331,7 +335,7 @@ transform: translateY(-6px);
 } 
 
 #cr-btn2{
- margin-left: 61%;
+ margin-left: 49%;
 }
 @media screen and (max-width: 600px) {
   .cr-post{
