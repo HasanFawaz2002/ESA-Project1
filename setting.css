@@ -8,70 +8,90 @@
   }
   
   /* Nav Bar Style */
-  nav {
-    background-color: white;
-    box-shadow: 0.3px 0.3px 0.3px rgb(53, 51, 51);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    height: 4.5rem;
+  /*animated logo*/
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #8B53FF 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+     transform: translateY(6px);
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+  .nav-a{
+    text-decoration: none;
   }
   
-  #btn {
-    background-color: lightblue;
-  }
-  
-  #inp {
-    width: 400px;
-    margin-right: 30px;
-    margin-left: 20px;
-  }
-  
-  #item {
-    color: black;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .nav-image {
-    border-radius: 50%;
-    width: 75px;
-    height: 50px;
-  }
-  
-  #navbarsExample04 {
-    margin-left: 200px;
-  }
-  
-  #item-container {
-    position: relative;
-    left: 10%;
-  }
-  
-  .btn1,
-  .btn2 {
-    border-radius: 20px;
-    margin-left: 40px;
-    background-color: white;
-    border: none;
-  }
-  
-  @media (max-width: 700px) {
-    #inp {
-      width: 100%;
+    .navbar {
+      height: 65px;
+      top: 0%;
+     
     }
-    .btn1,
-    .btn2 {
-      margin-left: 200px;
-    }
-    nav {
-      height: 7.2em;
-    }
+  
+  .navbar-brand>img{
+  height: 35px;
+  width: 35px;
+  border-radius: 75px;
+  }
+  .ul-main{
+      display: flex;
+      gap: 15px;
+      
+      width: 255px;
+      
+  }
+  .firstitem{
+      display: flex;
+      gap: 8px;
+  }
+  .seconditem{
+      display: flex;
+      gap: 8px;
+  }
+  .thirditem{
+      display: flex;
+      gap: 8px;
   }
   
-  #category-logo {
-    margin-top: 4px;
-  }
+  @media (max-width: 768px) {
+      .container-fluid{
+          width: auto;
+      }
+      .collapse{
+          background-color: aliceblue;
+  border-radius: 8px;
+  margin-top: 3px;
+  overflow: hidden;
+      }
+      .ul-main{
+          display: flex;
+          flex-direction: column;
+          
+          
+      }
   
+  
+  }
   /* Side Bar */
   #SO-btn {
     margin-top: 115px;
@@ -109,6 +129,8 @@
   }
   /*settings main*/
   #Settings-main{
+    margin-top: 55px;
+    width: 451%;
     padding: 15px;
     display: flex;
     flex-direction: column;

@@ -36,7 +36,9 @@ body {
 }
 
   /* navbar starts here */
-
+.nav-a{
+  text-decoration: none;
+}
 
   .navbar {
     height: 65px;
@@ -97,7 +99,7 @@ overflow: hidden;
     grid-template-rows: auto;
     grid-template-areas:
       "sidebar content friendlist";
-    height: 100vh; /* Set the height of the container to 100% of viewport height */
+    height: 100vh; 
   }
   @media screen and (max-width: 600px) {
     .main {
@@ -106,7 +108,7 @@ overflow: hidden;
       grid-template-rows: auto;
       grid-template-areas:
         "sidebar content friendlist";
-      height: 100vh; /* Set the height of the container to 100% of viewport height */
+      height: 100vh; 
     }
   }
 
