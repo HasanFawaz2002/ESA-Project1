@@ -131,3 +131,60 @@ closeBtn.addEventListener("click",()=>{
   alertcontainer.style.display = "none";
   pagecontainer.style.opacity = 1;
 })
+
+
+//Comments Modal
+const openModalBtn = document.getElementById("open-modal");
+const modal = document.getElementById("modal");
+const CloseBtn = document.querySelector(".close");
+const tabs = document.querySelectorAll(".tab");
+const tabContents = document.querySelectorAll(".tab-pane");
+
+openModalBtn.addEventListener("click", function() {
+  modal.style.display = "flex";
+});
+
+CloseBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+tabs.forEach(function(tab, index) {
+  tab.addEventListener("click", function() {
+    // Remove active class from all tabs
+    tabs.forEach(function(tab) {
+      tab.classList.remove("active");
+    });
+
+    // Hide all tab contents
+    tabContents.forEach(function(content) {
+      content.classList.remove("active");
+    });
+
+    // Set the selected tab as active
+    tab.classList.add("active");
+
+    // Show the selected tab content
+    tabContents[index].classList.add("active");
+  });
+});
+
+// Function to handle form submission
+document.getElementById('commentForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      //--var name = document.getElementById('name').value;
+      var comment = document.getElementById('comment').value;
+
+      // Create a new comment element
+      var newComment = document.createElement('div');
+      newComment.classList.add('comment');
+      newComment.innerHTML = '<div class="user" id="user"> <div class="usericon"></div> <div class="username">Ezalden S</div>  </div>' + '<p>' + comment + '</p>';
+
+      // Append the new comment to the comments section
+      $("#comments").after(newComment);
+
+      // Clear the form fields
+      //--document.getElementById('name').value = '';
+      document.getElementById('comment').value = '';
+    });
