@@ -41,7 +41,7 @@ body{
 }
 
 @media (max-width:700px) {
-    
+   
     .page-container{
         grid-template-columns: 1fr;
         width: 100%;

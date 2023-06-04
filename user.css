@@ -135,7 +135,11 @@ overflow: hidden;
   padding: 4px;
 }
 
-
+@media screen and (max-width: 700px){
+  .games{
+    display: none;
+  }
+}
 
 
 
