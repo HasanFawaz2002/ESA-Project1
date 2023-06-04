@@ -114,15 +114,42 @@ overflow: hidden;
 
 /*main grid ends here*/
 
+/*games starts here*/
+.games{
+  margin-top: 95px;
+  grid-area: sidebar;
+  margin-left: 17px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: .2px .3px 3px  black;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 4px;
+}
+
+#gamesbtn{
+  border: none;
+  border-radius: 4px;
+  background-color: #0055FF;
+  color: white;
+  padding: 4px;
+}
 
 
+
+
+
+
+/*games ends here*/
 
   /* sidebar starts here */
   .dropdown-container{
-    margin-top: 75px;
+    padding: 15px;
+    margin-left: 15px;
+    margin-top: 195px;
     grid-area: sidebar;
-    position: absolute;
-    width: 16%;
+   
+    width: fit-content;
     
     height: fit-content;
     background-color: white;
@@ -138,33 +165,9 @@ margin-left: 5px;
     margin: 20px 10px 0 10px;
 }
 @media screen and (max-width: 700px) {
-
-#dropdown-sb{
-  bottom: 0%;
-  width: 100%;
-  position: fixed;
-  border: 1px solid lightgrey;
-  height: 65px;
-}
-.dropdown-container span{
-  display: none;
-}
-.dropdown-container li svg{
-  margin-right: 28px;
-}
-  .dropdown-container>h4{
-   display: none;
+  .dropdown-container{
+    display: none;
   }
-.dropdown-container>ul{
-  justify-content: space-between;
-  display: flex;
-}
-.dropdown-container>li{
-  font-size: small;
-}
-#car-logo{
-transform: translateY(-6px);
-}
 }
 
   /* sidebar ends here */

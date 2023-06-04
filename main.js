@@ -126,3 +126,11 @@ searchBtn.addEventListener("click", ()=>{
 
 
 //weather api ends here
+
+
+
+//login btn
+
+document.getElementById("loginbtn").addEventListener("click", function() {
+    localStorage.setItem("shouldAnimate", "true");
+  });
