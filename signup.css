@@ -77,13 +77,12 @@ input:focus {
 
 }
 .bottom-button{
-    line-height: normal;
+    margin-top: 4%;
+    padding: 0.6rem;
     color: #0055FF;
     background-color: transparent;
     border: 1px solid #0055FF;
     border-radius: 15px;
-    width: 80px;
-    transition: all ease 400ms;
 }
 .bottom-button:hover{
     color: white;
@@ -109,12 +108,17 @@ h1{
 
 .logo{
     width: 150px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 2rem;
-}
+    height: 145px;
+    margin-left: 32%;
 
+}
+#gender{
+    border: 2px solid #0055FF;
+    line-height: 1.7rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    padding: 6px;
+}
 
 @keyframes opacity1{
     0%{

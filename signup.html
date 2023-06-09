@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+   
+    <div id="alert-container" style="top:0%; "></div> 
+    <div class="container">
+     
+        <div class="left-container">
+         
+            <img src="/images/Connected world.gif" alt="">
+        </div>
+       
+        <div class="middle-container" id="middle">
+            <a href="/guest.html"><img src="/images/Property 1=Default.jpg"  class="logo" alt=""></a>
+            <form action="">
+                <h1>Sign Up</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="firstname"  placeholder="First Name" id="fname">
+                        </td>
+                        <td>
+                            <input type="text" name="lastname"  placeholder="Last Name" id="lname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" name="email"  placeholder="Email" id="email">
+                        </td>
+                        <td>
+                            <input type="password" name="password"  placeholder="Password" id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" name="age"   placeholder="Age" style="width: 20%;" id="age">
+                        </td>
+                        <td>
+                            <select name="gender" id="gender">
+                                <option>Choose Your Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" class="signup" id="signupbtn">Sign Up</button>
+            </form>
+            <div class="bottom-container" style=" margin-top: 2rem;">
+                <p style="color: #0055FF;">Already have an account</p>
+                <a href="login.html"><button class="bottom-button" id="login">Log in</button></a>
+            </div>
+        </div>
+      
+    </div>
+
+    
+    <script src="signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
