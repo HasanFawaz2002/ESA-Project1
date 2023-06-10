@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+   
+    <div id="alert-container" style="top:0%; "></div> 
+    <div class="container">
+     
+        <div class="left-container">
+         
+            <img src="Connected world.gif" alt="">
+        </div>
+       
+        <div class="middle-container" id="middle">
+            <a href="/guest.html"><img src="Property 1=Default.jpg"  class="logo" alt=""></a>
+            <form action="">
+                <h1>Sign Up</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <div class="input-box">   
+                                <input type="text" name="firstname"  id="fname"  required>
+                                <span>First Name</span>
+                            </div>
+                        </td>
+                        
+                        <td>
+                            <div class="input-box">
+                                <input type="text" name="lastname"   id="lname" required>
+                                <span>Last Name</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-box">
+                                <input type="text" name="email"  id="email" required>
+                                <span>Email</span>
+                            </td>
+                        <td>
+                            <div class="input-box">
+                                <input type="password" name="password"  id="password" required>
+                                <span>Password</span>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-box">
+                                <input type="number" name="age" min="1" max="99"    style="width: 40%;" id="age" required>
+                                <span>Age</span>
+                            </td>
+                        <td>
+                            <div class="input-box">
+                                <select name="gender" placeholder="Choose Your Gender" id="gender" style="border:1px solid #7a7a7a; color: #7a7a7a;" required>
+                                    <optgroup label="Choose Your Gender"></optgroup>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" class="signup" id="signupbtn">Sign Up</button>
+            </form>
+            <div class="bottom-container" style=" margin-top: 2rem;">
+                <p style="color:#7a7a7a;">Already have an account  <a href="C:\Users\user\Desktop\NEW LOG IN\login.html" id="login"> Log in</a>
+</p>
+            </div>
+        </div>
+      
+    </div>
+
+    
+    <script src="signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
