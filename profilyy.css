@@ -29,8 +29,10 @@
   }
 }
 
-  /* navbar starts here */
-
+ /* navbar starts here */
+.nav-a{
+  text-decoration: none;
+}
 
   .navbar {
     height: 65px;
@@ -71,7 +73,7 @@ border-radius: 75px;
         background-color: aliceblue;
 border-radius: 8px;
 margin-top: 3px;
-z-index:1;
+overflow: hidden;
     }
     .ul-main{
         display: flex;
