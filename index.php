@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="guest.css" />
-    <script src="main.js" defer></script>
+    <script src="main1.js" defer></script>
     <title>Hangout</title>
   </head>
   <body>
@@ -21,8 +21,8 @@
     <nav class="navbar navbar-expand-lg"  style="position: fixed; width: 100%; z-index: 1;  box-shadow: 0 2px 5px;background-color: white; opacity: 1;">
       <div class="container-fluid">
         <h3 class="animate-charcter">
-          <a class="navbar-brand" href="#"
-            ><img src="/images/Logo.jpg" alt="" /> Hangout</a
+          <a class="navbar-brand" href="index.php"
+            ><img src="../images/Property 1=Default.jpg" alt="" /> Hangout</a
           >
         </h3>
         <form class="d-flex" role="search" style="width: 35%">
@@ -72,7 +72,7 @@
                     />
                   </svg>
                 </li>
-               <a href="guest.html" class="nav-a"> <span>Home</span></a>
+               <a href="index.php" class="nav-a"> <span>Home</span></a>
               </div>
 
               <div class="seconditem">
@@ -92,7 +92,7 @@
                   </svg>
                 </li>
 
-               <span><a style="text-decoration: none;" href="/signup.html">Settings</a></span></a> 
+               <span><a style="text-decoration: none;"  href="signup.html">Settings</a></span></a> 
               </div>
 
               <div class="thirditem">
@@ -128,9 +128,9 @@
             <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                   aria-expanded="false"
                 style="font-weight:bold ;" id="drop-btn1">
-                <i class='bx bx-chevron-right' id="drop-icon1"></i> <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.528 2.95383C15.6672 3.00939 15.7866 3.10539 15.8707 3.22945C15.9549 3.35351 15.9999 3.49993 16 3.64983V12.3118C15.9999 12.4617 15.9549 12.6081 15.8707 12.7322C15.7866 12.8563 15.6672 12.9523 15.528 13.0078L8.278 15.9078C8.09922 15.9793 7.89978 15.9793 7.721 15.9078L0.471 13.0078C0.331969 12.9521 0.212805 12.856 0.128861 12.732C0.0449156 12.6079 3.48599e-05 12.4616 0 12.3118L0 3.64983C3.48599e-05 3.50005 0.0449156 3.35371 0.128861 3.22966C0.212805 3.10561 0.331969 3.00954 0.471 2.95383L7.443 0.164825L7.447 0.163825L7.721 0.0538255C7.90008 -0.0179418 8.09992 -0.0179418 8.279 0.0538255L8.553 0.163825L8.557 0.164825L15.528 2.95383ZM14.154 3.48083L8 5.94283L1.846 3.48083L1 3.81983V4.21983L7.5 6.81983V14.7418L8 14.9418L8.5 14.7418V6.82083L15 4.22083V3.82083L14.154 3.48083Z" fill="#0055FF"/>
-                  </svg>
+                <i class='bx bx-chevron-right' id="drop-icon1"></i> <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM11 3.3L12.35 2.35C14.1589 2.91055 15.7107 4.0939 16.73 5.69L16.34 7.03L14.99 7.49L11 4.7V3.3ZM7.65 2.35L9 3.3V4.7L5.01 7.49L3.66 7.03L3.27 5.69C4.29519 4.09937 5.84478 2.91772 7.65 2.35ZM5.08 15.11L3.94 15.21C2.68645 13.764 1.99749 11.9137 2 10C2 9.88 2.01 9.77 2.02 9.65L3.02 8.92L4.4 9.4L5.86 13.74L5.08 15.11ZM12.5 17.59C11.71 17.85 10.87 18 10 18C9.13 18 8.29 17.85 7.5 17.59L6.81 16.1L7.45 15H12.56L13.2 16.11L12.5 17.59ZM12.27 13H7.73L6.38 8.98L10 6.44L13.63 8.98L12.27 13ZM16.06 15.21L14.92 15.11L14.13 13.74L15.59 9.4L16.98 8.93L17.98 9.66C17.99 9.77 18 9.88 18 10C18 11.99 17.27 13.81 16.06 15.21Z" fill="#0055FF"/>
+                      </svg>
                 <span><a href="http://localhost/ESA/index.php?category=Sport" style="text-decoration:none;color:black">Sports</a></span>  
             </button>
             </li>
@@ -138,9 +138,9 @@
             <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                   aria-expanded="false"
                 style="font-weight:bold ;" id="drop-btn1">
-                <i class='bx bx-chevron-right' id="drop-icon1"></i> <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.528 2.95383C15.6672 3.00939 15.7866 3.10539 15.8707 3.22945C15.9549 3.35351 15.9999 3.49993 16 3.64983V12.3118C15.9999 12.4617 15.9549 12.6081 15.8707 12.7322C15.7866 12.8563 15.6672 12.9523 15.528 13.0078L8.278 15.9078C8.09922 15.9793 7.89978 15.9793 7.721 15.9078L0.471 13.0078C0.331969 12.9521 0.212805 12.856 0.128861 12.732C0.0449156 12.6079 3.48599e-05 12.4616 0 12.3118L0 3.64983C3.48599e-05 3.50005 0.0449156 3.35371 0.128861 3.22966C0.212805 3.10561 0.331969 3.00954 0.471 2.95383L7.443 0.164825L7.447 0.163825L7.721 0.0538255C7.90008 -0.0179418 8.09992 -0.0179418 8.279 0.0538255L8.553 0.163825L8.557 0.164825L15.528 2.95383ZM14.154 3.48083L8 5.94283L1.846 3.48083L1 3.81983V4.21983L7.5 6.81983V14.7418L8 14.9418L8.5 14.7418V6.82083L15 4.22083V3.82083L14.154 3.48083Z" fill="#0055FF"/>
-                  </svg>
+                <i class='bx bx-chevron-right' id="drop-icon1"></i> <svg width="25" height="25" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 0L0 6V18H16V6L8 0ZM8.5 9.5C8.5 10.33 7.83 11 7 11V15H6V11C5.17 11 4.5 10.33 4.5 9.5V6.5H5.5V9.5H6V6.5H7V9.5H7.5V6.5H8.5V9.5ZM11 15H10V11.5H9V8.5C9 7.4 9.9 6.5 11 6.5V15Z" fill="#0055FF"/>
+                      </svg>
                 <span><a href="http://localhost/ESA/index.php?category=Food" style="text-decoration:none;color:black">Food</a></span>  
             </button>
             </li>
@@ -148,9 +148,13 @@
             <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                   aria-expanded="false"
                 style="font-weight:bold ;" id="drop-btn1">
-                <i class='bx bx-chevron-right' id="drop-icon1"></i> <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.528 2.95383C15.6672 3.00939 15.7866 3.10539 15.8707 3.22945C15.9549 3.35351 15.9999 3.49993 16 3.64983V12.3118C15.9999 12.4617 15.9549 12.6081 15.8707 12.7322C15.7866 12.8563 15.6672 12.9523 15.528 13.0078L8.278 15.9078C8.09922 15.9793 7.89978 15.9793 7.721 15.9078L0.471 13.0078C0.331969 12.9521 0.212805 12.856 0.128861 12.732C0.0449156 12.6079 3.48599e-05 12.4616 0 12.3118L0 3.64983C3.48599e-05 3.50005 0.0449156 3.35371 0.128861 3.22966C0.212805 3.10561 0.331969 3.00954 0.471 2.95383L7.443 0.164825L7.447 0.163825L7.721 0.0538255C7.90008 -0.0179418 8.09992 -0.0179418 8.279 0.0538255L8.553 0.163825L8.557 0.164825L15.528 2.95383ZM14.154 3.48083L8 5.94283L1.846 3.48083L1 3.81983V4.21983L7.5 6.81983V14.7418L8 14.9418L8.5 14.7418V6.82083L15 4.22083V3.82083L14.154 3.48083Z" fill="#0055FF"/>
-                  </svg>
+                <i class='bx bx-chevron-right' id="drop-icon1"></i><svg width="25" height="25" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 17H15ZM10 17H5Z" fill="#0055FF"/>
+                      <path d="M15 17H10H5" stroke="#0055FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 17V13Z" fill="#0055FF"/>
+                      <path d="M10 17V13" stroke="#0055FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 13H1V1H19V13H10Z" fill="#0055FF" stroke="#0055FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
                 <span><a href="http://localhost/ESA/index.php?category=Computers" style="text-decoration:none;color:black">Computers</a></span>  
             </button>
             </li>
@@ -158,9 +162,10 @@
             <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                   aria-expanded="false"
                 style="font-weight:bold ;" id="drop-btn1">
-                <i class='bx bx-chevron-right' id="drop-icon1"></i> <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.528 2.95383C15.6672 3.00939 15.7866 3.10539 15.8707 3.22945C15.9549 3.35351 15.9999 3.49993 16 3.64983V12.3118C15.9999 12.4617 15.9549 12.6081 15.8707 12.7322C15.7866 12.8563 15.6672 12.9523 15.528 13.0078L8.278 15.9078C8.09922 15.9793 7.89978 15.9793 7.721 15.9078L0.471 13.0078C0.331969 12.9521 0.212805 12.856 0.128861 12.732C0.0449156 12.6079 3.48599e-05 12.4616 0 12.3118L0 3.64983C3.48599e-05 3.50005 0.0449156 3.35371 0.128861 3.22966C0.212805 3.10561 0.331969 3.00954 0.471 2.95383L7.443 0.164825L7.447 0.163825L7.721 0.0538255C7.90008 -0.0179418 8.09992 -0.0179418 8.279 0.0538255L8.553 0.163825L8.557 0.164825L15.528 2.95383ZM14.154 3.48083L8 5.94283L1.846 3.48083L1 3.81983V4.21983L7.5 6.81983V14.7418L8 14.9418L8.5 14.7418V6.82083L15 4.22083V3.82083L14.154 3.48083Z" fill="#0055FF"/>
-                  </svg>
+                <i class='bx bx-chevron-right' id="drop-icon1"></i><svg id="car-logo" width="34" height="34" viewBox="0 0 41 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.645 4.395C14.2179 4.36217 13.819 4.16936 13.528 3.8551C13.237 3.54084 13.0753 3.12831 13.0753 2.7C13.0753 2.27169 13.237 1.85916 13.528 1.5449C13.819 1.23065 14.2179 1.03783 14.645 1.005H26.645C26.8785 0.987049 27.1133 1.01755 27.3345 1.09459C27.5557 1.17164 27.7585 1.29356 27.9304 1.45271C28.1022 1.61185 28.2394 1.8048 28.3331 2.01944C28.4269 2.23408 28.4753 2.46577 28.4753 2.7C28.4753 2.93423 28.4269 3.16593 28.3331 3.38056C28.2394 3.5952 28.1022 3.78815 27.9304 3.9473C27.7585 4.10644 27.5557 4.22836 27.3345 4.30541C27.1133 4.38245 26.8785 4.41295 26.645 4.395H14.645ZM6.505 11.485C6.51284 11.0146 6.70456 10.5659 7.03913 10.2351C7.37369 9.90423 7.8245 9.71755 8.295 9.715H9.695L12.355 7.455C12.5587 7.28139 12.8174 7.18571 13.085 7.185H28.345C28.7548 7.18729 29.1478 7.34769 29.4422 7.63275C29.7366 7.91781 29.9095 8.30552 29.925 8.715V10.865H31.715C32.135 10.8676 32.5368 11.0363 32.8328 11.3342C33.1289 11.6321 33.295 12.035 33.295 12.455V24.845C33.295 25.264 33.1285 25.6659 32.8322 25.9622C32.5359 26.2585 32.134 26.425 31.715 26.425H18.155C17.9199 26.4262 17.6899 26.3565 17.495 26.225L12.505 22.715H8.295C8.05653 22.7151 7.82045 22.6675 7.60063 22.575C7.38081 22.4826 7.18167 22.3471 7.01492 22.1767C6.84817 22.0062 6.71717 21.8041 6.6296 21.5823C6.54203 21.3605 6.49967 21.1234 6.505 20.885V11.485ZM4.395 21.265C4.36217 21.6921 4.16936 22.091 3.8551 22.382C3.54084 22.673 3.12831 22.8347 2.7 22.8347C2.27169 22.8347 1.85916 22.673 1.5449 22.382C1.23064 22.091 1.03783 21.6921 1.005 21.265V11.095C0.987049 10.8615 1.01755 10.6267 1.09459 10.4055C1.17164 10.1844 1.29356 9.98146 1.4527 9.80961C1.61185 9.63776 1.8048 9.50065 2.01944 9.40688C2.23408 9.31311 2.46577 9.26471 2.7 9.26471C2.93423 9.26471 3.16593 9.31311 3.38056 9.40688C3.5952 9.50065 3.78815 9.63776 3.9473 9.80961C4.10644 9.98146 4.22836 10.1844 4.30541 10.4055C4.38245 10.6267 4.41295 10.8615 4.395 11.095V21.265ZM4.395 16.175H6.505ZM35.145 11.935C35.1476 11.6361 35.2675 11.3502 35.4789 11.1389C35.6902 10.9275 35.9761 10.8076 36.275 10.805H37.105C37.2855 10.8057 37.4633 10.8496 37.6234 10.9332C37.7834 11.0167 37.9212 11.1373 38.025 11.285L39.795 13.715C39.9294 13.909 40.0026 14.1389 40.005 14.375V21.715C40.0073 21.9611 39.9262 22.2008 39.775 22.395L38.025 24.715C37.9215 24.8576 37.7864 24.9742 37.6302 25.0557C37.4741 25.1373 37.3011 25.1815 37.125 25.185H36.275C35.9761 25.1824 35.6902 25.0625 35.4789 24.8511C35.2675 24.6398 35.1476 24.3539 35.145 24.055V11.935ZM20.645 7.155V4.395ZM35.145 17.985H33.295Z" fill="#0055FF"/>
+                      <path d="M4.395 16.175H6.505M20.645 7.155V4.395M35.145 17.985H33.295M14.645 4.395C14.2179 4.36217 13.819 4.16936 13.528 3.8551C13.237 3.54084 13.0753 3.12831 13.0753 2.7C13.0753 2.27169 13.237 1.85916 13.528 1.5449C13.819 1.23065 14.2179 1.03783 14.645 1.005H26.645C26.8785 0.987049 27.1133 1.01755 27.3345 1.09459C27.5557 1.17164 27.7585 1.29356 27.9304 1.45271C28.1022 1.61185 28.2394 1.8048 28.3331 2.01944C28.4269 2.23408 28.4753 2.46577 28.4753 2.7C28.4753 2.93423 28.4269 3.16593 28.3331 3.38056C28.2394 3.5952 28.1022 3.78815 27.9304 3.9473C27.7585 4.10644 27.5557 4.22836 27.3345 4.30541C27.1133 4.38245 26.8785 4.41295 26.645 4.395H14.645ZM6.505 11.485C6.51284 11.0146 6.70456 10.5659 7.03913 10.2351C7.37369 9.90423 7.8245 9.71755 8.295 9.715H9.695L12.355 7.455C12.5587 7.28139 12.8174 7.18571 13.085 7.185H28.345C28.7548 7.18729 29.1478 7.34769 29.4422 7.63275C29.7366 7.91781 29.9095 8.30552 29.925 8.715V10.865H31.715C32.135 10.8676 32.5368 11.0363 32.8328 11.3342C33.1289 11.6321 33.295 12.035 33.295 12.455V24.845C33.295 25.264 33.1285 25.6659 32.8322 25.9622C32.5359 26.2585 32.134 26.425 31.715 26.425H18.155C17.9199 26.4262 17.6899 26.3565 17.495 26.225L12.505 22.715H8.295C8.05653 22.7151 7.82045 22.6675 7.60063 22.575C7.38081 22.4826 7.18167 22.3471 7.01492 22.1767C6.84817 22.0062 6.71717 21.8041 6.6296 21.5823C6.54203 21.3605 6.49967 21.1234 6.505 20.885V11.485ZM4.395 21.265C4.36217 21.6921 4.16936 22.091 3.8551 22.382C3.54084 22.673 3.12831 22.8347 2.7 22.8347C2.27169 22.8347 1.85916 22.673 1.5449 22.382C1.23064 22.091 1.03783 21.6921 1.005 21.265V11.095C0.987049 10.8615 1.01755 10.6267 1.09459 10.4055C1.17164 10.1844 1.29356 9.98146 1.4527 9.80961C1.61185 9.63776 1.8048 9.50065 2.01944 9.40688C2.23408 9.31311 2.46577 9.26471 2.7 9.26471C2.93423 9.26471 3.16593 9.31311 3.38056 9.40688C3.5952 9.50065 3.78815 9.63776 3.9473 9.80961C4.10644 9.98146 4.22836 10.1844 4.30541 10.4055C4.38245 10.6267 4.41295 10.8615 4.395 11.095V21.265ZM35.145 11.935C35.1476 11.6361 35.2675 11.3502 35.4789 11.1389C35.6902 10.9275 35.9761 10.8076 36.275 10.805H37.105C37.2855 10.8057 37.4633 10.8496 37.6234 10.9332C37.7834 11.0167 37.9212 11.1373 38.025 11.285L39.795 13.715C39.9294 13.909 40.0026 14.1389 40.005 14.375V21.715C40.0073 21.9611 39.9262 22.2008 39.775 22.395L38.025 24.715C37.9215 24.8576 37.7864 24.9742 37.6302 25.0557C37.4741 25.1373 37.3011 25.1815 37.125 25.185H36.275C35.9761 25.1824 35.6902 25.0625 35.4789 24.8511C35.2675 24.6398 35.1476 24.3539 35.145 24.055V11.935Z" stroke="grey" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
                 <span><a href="http://localhost/ESA/index.php?category=Cars" style="text-decoration:none;color:black">Cars</a></span>  
             </button>
             </li>
@@ -187,39 +192,7 @@
  
 
       <!--Create Post starts here-->
-<div class="shadow p-3 mb-5 bg-body-white rounded cr-post h-24 w-55" >
-  <h6 style="color: lightgrey;">What's on your mind?</h6>
-<textarea name="" id="" cols="30" rows="1" class="cr-input"></textarea>
-<button type="button" class="btn btn-primary btn-sm" >Create Post</button>
-<button type="button" id="cr-btn2" class="btn btn-primary btn-sm "  data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add Image
- </button>
-<!-- Button trigger modal -->
 
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Post</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <textarea name="" id="cr-modalbtn" cols="30" rows="1"  ></textarea>
-        <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupFile01">Upload</label>
-          <input type="file" class="form-control" id="inputGroupFile01">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Post</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 <!--Create Post ends here-->
 
 
@@ -375,7 +348,7 @@ while($row = mysqli_fetch_assoc($result)){
 <?php
   }else if(!empty($row['postImage'])){?>
 <!--Post with an image and with a specific category-->
-<div class="second-post">
+<div class="second-post" >
                 <div class="posts-header">
                     <button class="posts-img-btn"
                         style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img

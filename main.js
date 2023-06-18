@@ -1,4 +1,4 @@
-//carousel starts here
+/*//carousel starts here
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
@@ -84,7 +84,7 @@ carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 //carousel ends here
-
+*/
 
 
 

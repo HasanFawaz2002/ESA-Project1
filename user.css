@@ -77,7 +77,7 @@ border-radius: 75px;
 
 @media (max-width: 768px) {
     .container-fluid{
-        width: auto;
+        width: 100%;
     }
     .collapse{
         background-color: aliceblue;

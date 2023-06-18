@@ -42,8 +42,6 @@ text-decoration: none;
 
 .navbar {
   height: 65px;
-  
- 
 }
 
 .navbar-brand>img{
@@ -88,7 +86,7 @@ border-radius: 75px;
 }
 @media (max-width: 768px) {
   .container-fluid{
-      width: auto;
+      width: 100%;
   }
   .collapse{
       background-color: aliceblue;
@@ -99,8 +97,6 @@ overflow: hidden;
   .ul-main{
       display: flex;
       flex-direction: column;
-      
-      
   }
 
 
@@ -212,7 +208,11 @@ border-radius: 10px;
 }
 
 
-
+@media screen and (max-width: 700px) {
+  .wrapper{
+    margin-bottom: 200px;
+  }
+}
 
 
 
@@ -222,56 +222,7 @@ border-radius: 10px;
 
 
 
-/*create post starts here*/
-.cr-post{
-  grid-area: content;
-  background-color: white;
-  height: 115px;
-  width: 60%;
- 
-  margin-left: 13%;
-  border-radius: 8px;
-  box-shadow: .6px .6px .6px .6px black ;
-  
-}
-.crbtn1{
-margin-right:155px ;
-}
 
-.cr-input{
-  width: 99%;
-  border-radius: 6px;
-  border: 1px solid lightgrey;
-  
-} 
-
-#cr-btn2{
-margin-left: 49%;
-}
-@media screen and (max-width: 600px) {
-.cr-post{
-  grid-area: content;
-  background-color: white;
-  height: 115px;
-  width: 75%;
- 
-  margin-left: 11%;
-  border-radius: 8px;
-  box-shadow: .6px .6px .6px .6px black ;
-  
-}
-.cr-post>button{
-transform: translateY(-6px);
-height: 35%;
-font-size: small;
-margin-left: none;
-margin-top: 8px;
-}
-#cr-btn2{
-margin-left: 39%;
-}
-}
-/*create post ends here*/
 
 /* Fisrt Post*/
 
@@ -356,16 +307,19 @@ border-radius: 25px;
 }
 
 @media (max-width:600px) {
+
+  
+
   .first-post{
       width: 100%;
       height: fit-content;
-      margin-top: 190px;
       padding-bottom: 10px;
   }
   .second-post{
     width: 100%;
       height: fit-content;
       padding-bottom: 10px;
+      
   }
   .posts-footer{
       margin-bottom: 1.5rem;
@@ -476,7 +430,7 @@ background-color: white;
 
 @media screen and (max-width: 600px) {
   .card-weather{
-    margin-top: 100px;
+    margin-top: 0px;
   }
   .search-weather{
     height: 25%;
