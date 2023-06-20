@@ -36,8 +36,8 @@ function validateForm(event) {
     }
     
     if (!hasErrors) {
-       
-    }
+       return true;
+    } return false;
 }
 
 function createAlert(message) {
@@ -52,7 +52,7 @@ function createAlert(message) {
         alertElement.style.opacity = "0";
         setTimeout(() => {
             alertElement.remove();
-        }, 300); 
+        }, 800); 
     }, 2000); 
    
     let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -66,8 +66,9 @@ function createAlert(message) {
     alertContainer.style.width = containerWidth + "px";
     alertContainer.appendChild(alertElement);
     return alertElement;
+    
 }
 
 
 
-document.getElementById("signupbtn").addEventListener("click", validateForm);
+document.getElementById("bbb").addEventListener("click", validateForm);

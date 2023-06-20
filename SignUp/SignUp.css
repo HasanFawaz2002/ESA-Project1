@@ -1,12 +1,12 @@
 
-body{
+     body{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: linear-gradient(to right, #48C6EF, #6F86D6); 
-    
-   }
+      
+     }
    
    
      .inner-container:hover{
