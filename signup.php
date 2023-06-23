@@ -1,3 +1,5 @@
+<?php include("conn.php")?>
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,41 +15,102 @@
 </head>
 <body>
 
-   
+<?php
+
+$firstnameerror="";
+$lastnameerror="";
+$emailerror="";
+$passworderror="";
+$ageerror="";
+$gendererror="";
+// Check if the form is submitted
+if (isset($_POST['signup'])) {
+    
+    if (empty($_POST["firstname"])) {
+        $firstnameerror = "First Name is required.";
+    }
+    if (empty($_POST["lastname"])) {
+        $lastnameerror = "Last Name is required.";
+    } 
+    if (empty($_POST["email"])) {
+        $emailerror = "Email is required.";
+    } else if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+        $emailerror = "Invalid email format.";
+    }
+    if (empty($_POST["password"])) {
+        $passworderror = "Password is required.";
+    } 
+    if (empty($_POST["age"])) {
+        $ageerror = "Age is required.";
+    } elseif (!is_numeric($_POST["age"])) {
+        $ageerror = "Age must be a number.";
+    } 
+    if ($_POST["gender"] == "Choose Your Gender") {
+        $gendererror = "Please select your gender.";
+    } else {
+        // Check if the email already exists in the database
+        $email = $_POST["email"];
+        $query = "SELECT * FROM user WHERE Email = '$email'";
+        $result = mysqli_query($conn, $query);
+        if (mysqli_num_rows($result) === 1) {
+            $emailerror = "Email already exists.";
+        }
+    }
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $age = $_POST['age'];
+    $gender = $_POST['gender'];
+    $q = "INSERT INTO user ( `Firstname`, `Lastname`, `Email`, `Password`, `Age`,`Gender`) VALUES ( '$firstname', '$lastname', '$email', '$password', $age, '$gender')";
+    $result=mysqli_query($conn,$q);
+    if($result){
+        $q1 = "SELECT `userID` FROM `user` WHERE `Email`='$email' ";
+        $result1=mysqli_query($conn,$q1);
+        $row = mysqli_fetch_assoc($result1);
+        $_SESSION['userID'] = $row['userID'];
+        header("location:test.php");
+    }
+}
+?>
+
     <div id="alert-container" style="top:0%; "></div> 
     <div class="container">
-     
         <div class="left-container">
-         
             <img src="/images/Connected world.gif" alt="">
         </div>
-       
         <div class="middle-container" id="middle">
             <a href="/guest.html"><img src="/images/Property 1=Default.jpg"  class="logo" alt=""></a>
-            <form action="">
+            <form action="http://localhost/ESA/signup.php" method="post">
                 <h1>Sign Up</h1>
                 <table>
                     <tr>
                         <td>
+                            <?php echo "<span style='color:red'>$firstnameerror</span>" ?>
                             <input type="text" name="firstname"  placeholder="First Name" id="fname">
                         </td>
                         <td>
+                            <?php echo "<span style='color:red'>$lastnameerror</span>" ?>
                             <input type="text" name="lastname"  placeholder="Last Name" id="lname">
                         </td>
                     </tr>
                     <tr>
                         <td>
+                            <?php echo "<span style='color:red'>$emailerror</span>"  ?>
                             <input type="email" name="email"  placeholder="Email" id="email">
                         </td>
                         <td>
+                            <?php echo "<span style='color:red'>$passworderror</span>" ?>
                             <input type="password" name="password"  placeholder="Password" id="password">
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="display:grid ;">
+                            <?php echo "<span style='color:red'>$ageerror</span>" ?>
                             <input type="number" name="age"   placeholder="Age" style="width: 20%;" id="age">
                         </td>
                         <td>
+                            <?php echo "<span style='color:red'>$gendererror</span>" ?>
                             <select name="gender" id="gender">
                                 <option>Choose Your Gender</option>
                                 <option value="male">Male</option>
@@ -56,18 +119,20 @@
                         </td>
                     </tr>
                 </table>
-                <button type="submit" class="signup" id="signupbtn">Sign Up</button>
+                <button type="submit" class="signup" name="signup" id="signupbtn">Sign Up</button>
             </form>
             <div class="bottom-container" style=" margin-top: 2rem;">
                 <p style="color: #0055FF;">Already have an account</p>
-                <a href="login.html"><button class="bottom-button" id="login">Log in</button></a>
+                <a href="login.php"><button class="bottom-button" id="login">Log in</button></a>
             </div>
         </div>
-      
     </div>
+    
 
     
-    <script src="signup.js"></script>
+
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

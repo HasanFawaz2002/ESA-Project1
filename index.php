@@ -6,14 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="guest.css" />
-    <script src="main1.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="guest7.css" />
     <title>Hangout</title>
   </head>
   <body>
@@ -96,8 +90,8 @@
               </div>
 
               <div class="thirditem">
-                <a href="signup.html" style="text-decoration: none;"><button id="signupbtn">Sign Up</button></a>
-                <a href="login.html"><button id="loginbtn" href="">Login</button></a>
+                <a href="signup.php" style="text-decoration: none;"><button id="signupbtn">Sign Up</button></a>
+                <a href="login.php"><button id="loginbtn" href="">Login</button></a>
               </div>
             </div>
           </ul>
@@ -183,11 +177,10 @@
 
       <!--carousel-->
       <div class="content">
+
         <div class="wrapper">
           <h1>Create Account to see Story's</h1>
-        </div>
-
-      
+        </div> 
       <!--carousel ends here-->
  
 
@@ -226,12 +219,12 @@ $result = mysqli_query($conn,$q);
 while($row = mysqli_fetch_assoc($result)){
   // Post Without Image
   if(empty($row['postImage'])){
-  ?>
-<div class="first-post">
+    $postID = $row['postID'];?>
+<div class="first-post post" data-post-id="1">
   <div class="posts-header">
       <button class="posts-img-btn"
           style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
-              class="posts-img" src="<?php echo $row['userprofile']?>" alt=""></button>
+              class="posts-img" src="<?php echo "images/". $row['userprofile']?>" alt=""></button>
       <div class="posts-head">
           <p class="posts-text"><?php echo $row['Firstname']."".$row['Lastname']?></p>
           <p class="posts-text" style="display: inline;margin-top: 0; ">
@@ -245,24 +238,64 @@ while($row = mysqli_fetch_assoc($result)){
       </div>
   </div>
   <div class="posts-content">
-      <p><?php echo $row['Text']?></p>
+      <p style="word-break: break-all;"><?php echo $row['Text']?></p>
   </div>
   <div class="posts-footer">
-      <img src="images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
-      <img src="images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
+      <img src="/images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
+      <img src="/images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
       <button class="footer-text1">2.8 Like</button>
-      <button class="footer-text2" id="open-modal">22 comment</button>
+      <button type="button"  class="modal-btn footer-text2"> comments</button>
       <button class="footer-text3">share</button>
   </div>
+  <!-- Modal-->
+  <div class="modal">
+    <div class="comment-head">
+    <h2>Comments</h2>
+    <button  class="commentclose">Close</button>
+    </div>
+    <div class="comments-container">
+    <ul>
+    <?php
+      $q2 = "SELECT *\n"
+
+      . "FROM comments c\n"
+  
+      . "JOIN user u ON c.userID = u.userID\n"
+  
+      . "WHERE c.postID = $postID";
+      $result2 = mysqli_query($conn,$q2);
+      while($row2 = mysqli_fetch_assoc($result2)){?>
+      <li class="comments-list">
+        <img src="<?php echo "images/". $row2['userprofile']?>" alt="">
+        <div class="comment-container">
+            <p><?php echo $row2['Firstname']." ".$row2['Lastname']?></p>
+            <span><?php echo $row2['comment']?></span>
+        </div>
+      </li>
+      <?php
+      }
+      ?>
+      
+    </ul>
+    </div>
+    <div class="comments-bottom">
+      <form action="">
+        <input type="text" name="comment">
+        <button class="comment-btn" type="button">Add Comment</button>
+      </form>
+    </div>
+  </div>
+  <!-- MODAL END HERE-->
 </div>
 <?php
-  }else if(!empty($row['postImage'])){?>
+  }else if(!empty($row['postImage'])){
+    $postID = $row['postID'];?>
 <!-- Post With Image-->
-<div class="second-post">
+<div class="second-post post" data-post-id="1">
                 <div class="posts-header">
                     <button class="posts-img-btn"
                         style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
-                            class="posts-img" src="<?php echo $row['userprofile'] ?>" alt=""></button>
+                            class="posts-img" src="<?php echo "images/". $row['userprofile'] ?>" alt=""></button>
                     <div class="posts-head">
                         <p class="posts-text"><?php echo $row['Firstname']."".$row['Lastname']?></p>
                         <p class="posts-text" style="display: inline;margin-top: 0; "><?php
@@ -275,18 +308,57 @@ while($row = mysqli_fetch_assoc($result)){
                     </div>
                 </div>
                 <div class="posts-content">
-                    <p><?php echo $row['Text']?></p>
+                    <p style="word-break: break-all;"><?php echo $row['Text']?></p>
                 </div>
                 <div class="posts-images-container">
-                    <img class="posts-img1" src="<?php echo $row['postImage']?>" alt="">
+                    <img class="posts-img1" src="<?php echo"images/". $row['postImage']?>" alt="">
                 </div>
                 <div class="posts-footer">
                     <img src="/images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
                     <img src="/images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
                     <button class="footer-text1">2.8 Like</button>
-                    <button class="footer-text2">22 comment</button>
+                    <button type="button"  class="modal-btn footer-text2"> comments</button>
                     <button class="footer-text3">share</button>
                 </div>
+                <!-- Modal-->
+  <div class="modal">
+    <div class="comment-head">
+    <h2>Comments</h2>
+    <button  class="commentclose">Close</button>
+    </div>
+    <div class="comments-container">
+    <ul>
+    <?php
+      $q2 = "SELECT *\n"
+
+      . "FROM comments c\n"
+  
+      . "JOIN user u ON c.userID = u.userID\n"
+  
+      . "WHERE c.postID = $postID";
+      $result2 = mysqli_query($conn,$q2);
+      while($row2 = mysqli_fetch_assoc($result2)){?>
+      <li class="comments-list">
+        <img src="<?php echo "images/". $row2['userprofile']?>" alt="">
+        <div class="comment-container">
+            <p><?php echo $row2['Firstname']." ".$row2['Lastname']?></p>
+            <span><?php echo $row2['comment']?></span>
+        </div>
+      </li>
+      <?php
+      }
+      ?>
+      
+    </ul>
+    </div>
+    <div class="comments-bottom">
+      <form action="">
+        <input type="text" name="comment">
+        <button class="comment-btn" type="button">Add Comment</button>
+      </form>
+    </div>
+  </div>
+  <!-- MODAL END HERE-->
             </div>
   <?php
   }
@@ -314,14 +386,15 @@ $q = "SELECT \n"
 . "ORDER BY `post`.`Time` ASC";
 $result = mysqli_query($conn,$q);
 while($row = mysqli_fetch_assoc($result)){
-  // Post without Image and with a specific Category
+  // Post without Image 
   if(empty($row['postImage'])){
+    $postID = $row['postID'];
   ?>
-<div class="first-post">
+<div class="first-post post" data-post-id="1">
   <div class="posts-header">
       <button class="posts-img-btn"
           style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
-              class="posts-img" src="<?php echo $row['userprofile']?>" alt=""></button>
+              class="posts-img" src="<?php echo "images/". $row['userprofile']?>" alt=""></button>
       <div class="posts-head">
           <p class="posts-text"><?php echo $row['Firstname']."".$row['Lastname']?></p>
           <p class="posts-text" style="display: inline;margin-top: 0; ">
@@ -335,24 +408,67 @@ while($row = mysqli_fetch_assoc($result)){
       </div>
   </div>
   <div class="posts-content">
-      <p><?php echo $row['Text']?></p>
+      <p style="word-break: break-all;"><?php echo $row['Text']?></p>
   </div>
   <div class="posts-footer">
       <img src="images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
       <img src="images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
       <button class="footer-text1">2.8 Like</button>
-      <button class="footer-text2" id="open-modal">22 comment</button>
+      <button type="button"  class="modal-btn footer-text2"> comments</button>
       <button class="footer-text3">share</button>
   </div>
+  <!-- Modal-->
+  <div class="modal">
+    <div class="comment-head">
+    <h2>Comments</h2>
+    <button  class="commentclose">Close</button>
+    </div>
+    <div class="comments-container">
+    <ul>
+      <?php
+      $q2 = "SELECT *\n"
+
+      . "FROM comments c\n"
+  
+      . "JOIN user u ON c.userID = u.userID\n"
+  
+      . "WHERE c.postID = $postID";
+      $result2 = mysqli_query($conn,$q2);
+      while($row2 = mysqli_fetch_assoc($result2)){?>
+      <li class="comments-list">
+        <img src="<?php echo "images/".$row2['userprofile']?>" alt="">
+        <div class="comment-container">
+            <p><?php echo $row2['Firstname']." ".$row2['Lastname']?></p>
+            <span><?php echo $row2['comment']?></span>
+        </div>
+      </li>
+      <?php
+      }
+      ?>
+      
+    </ul>
+    </div>
+    <div class="comments-bottom">
+      
+      <form action="">
+        <input type="text" name="comment" >
+        <button class="comment-btn" type="button">Add Comment</button>
+      </form>
+    </div>
+  </div>
+  <!-- MODAL END HERE-->
 </div>
+
+
 <?php
-  }else if(!empty($row['postImage'])){?>
-<!--Post with an image and with a specific category-->
-<div class="second-post" >
+  }else if(!empty($row['postImage'])){
+    $postID = $row['postID'];?>
+<!--Post with an image-->
+<div class="second-post post" data-post-id="1">
                 <div class="posts-header">
                     <button class="posts-img-btn"
                         style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
-                            class="posts-img" src="<?php echo $row['userprofile'] ?>" alt=""></button>
+                            class="posts-img" src="<?php echo "images/".$row['userprofile'] ?>" alt=""></button>
                     <div class="posts-head">
                         <p class="posts-text"><?php echo $row['Firstname']."".$row['Lastname']?></p>
                         <p class="posts-text" style="display: inline;margin-top: 0; "><?php
@@ -365,18 +481,57 @@ while($row = mysqli_fetch_assoc($result)){
                     </div>
                 </div>
                 <div class="posts-content">
-                    <p><?php echo $row['Text']?></p>
+                    <p style="word-break: break-all;"><?php echo $row['Text']?></p>
                 </div>
                 <div class="posts-images-container">
-                    <img class="posts-img1" src="<?php echo $row['postImage']?>" alt="">
+                    <img class="posts-img1" src="<?php echo "images/".$row['postImage']?>" alt="">
                 </div>
                 <div class="posts-footer">
                     <img src="/images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
                     <img src="/images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
                     <button class="footer-text1">2.8 Like</button>
-                    <button class="footer-text2">22 comment</button>
+                    <button type="button"  class="modal-btn footer-text2"> comments</button>
                     <button class="footer-text3">share</button>
                 </div>
+                <!-- Modal-->
+  <div class="modal">
+    <div class="comment-head">
+    <h2>Comments</h2>
+    <button  class="commentclose">Close</button>
+    </div>
+    <div class="comments-container">
+    <ul>
+    <?php
+      $q2 = "SELECT *\n"
+
+      . "FROM comments c\n"
+  
+      . "JOIN user u ON c.userID = u.userID\n"
+  
+      . "WHERE c.postID = $postID";
+      $result2 = mysqli_query($conn,$q2);
+      while($row2 = mysqli_fetch_assoc($result2)){?>
+      <li class="comments-list">
+        <img src="<?php echo "images/".$row2['userprofile']?>" alt="">
+        <div class="comment-container">
+            <p><?php echo $row2['Firstname']." ".$row2['Lastname']?></p>
+            <span><?php echo $row2['comment']?></span>
+        </div>
+      </li>
+      <?php
+      }
+      ?>
+      
+    </ul>
+    </div>
+    <div class="comments-bottom">
+      <form action="">
+        <input type="text" name="comment">
+        <button class="comment-btn" type="button">Add Comment</button>
+      </form>
+    </div>
+  </div>
+  <!-- MODAL END HERE-->
             </div>
   <?php
   }
@@ -434,7 +589,7 @@ while($row = mysqli_fetch_assoc($result)){
 
           <div id="guestfriendlist">
             <h2>create Account to add Friends!</h2>
-       <button href="/signup.html">Sign Up</button>
+            <a href="signup.php" class="btn btn-primary">Sign Up</a>
           </div>
        
 
@@ -454,10 +609,8 @@ while($row = mysqli_fetch_assoc($result)){
     </div>
     <!--Main Container end-->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="index1.js"></script>
   </body>
 </html>

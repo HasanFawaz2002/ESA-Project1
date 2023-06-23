@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 
@@ -184,7 +185,6 @@ transform: translateY(-6px);
 .content {
  padding: 25px;
   grid-area: content;
-
 }
 
 /*carousel starts here*/
@@ -227,6 +227,7 @@ border-radius: 10px;
 /* Fisrt Post*/
 
 .first-post{
+  position: relative;
   height: fit-content;
   width: 90%;
   border-radius: 25px;
@@ -287,6 +288,7 @@ border-radius: 10px;
 
 /* Second post container */
 .second-post{
+  position: relative;
   height: fit-content;
   width: 90%;
   background-color: white;
@@ -510,3 +512,94 @@ transform: translateY(-6px);
   
   }
 /*notifaction ends here*/
+
+
+/* Modal Style*/
+
+.modal{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  background-color: lightblue;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 700px;
+  height: fit-content;
+  display: none;
+  border-radius: 10px;
+}
+
+.modal.open {
+  display: block;
+  /* Add additional styles for the open modal */
+}
+
+.comments-bottom{
+  margin-left: 100px;
+  margin-top: 20px;
+}
+.comment-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.commentclose{
+  border: transparent;
+  height: fit-content;
+  margin-right: 20px;
+  line-height: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.comments-bottom input{
+  width: 400px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+
+.modal .comments-list{
+  list-style: none;
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+  padding: 5px;
+}
+
+.modal .comments-list .comment{
+  margin-left: 10px;
+}
+.comments-container{
+  overflow-y: auto;
+  height: 200px;
+}
+.comment-btn{
+  background-color: rgb(22, 22, 219);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  border: transparent;
+}
+.comments-list img{
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width:700px) {
+  .modal{
+      width: 450px;
+  }
+  .comments-bottom input{
+      width: 200px;
+  }
+  .comments-bottom{
+      margin-left: 50px;
+  }
+}
