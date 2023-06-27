@@ -13,7 +13,7 @@ $result = mysqli_query($conn,$q);
 if(!$result){
     die ("Query Faild");
 }else{
-    header('location:admin.php?del=Record Deleted');
+    header('location:http://localhost/ESA/Admin/admin.php?del=Record Deleted');
 }
 ?>
 <?php $conn->close();?>

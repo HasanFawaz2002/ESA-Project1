@@ -224,7 +224,7 @@ while($row = mysqli_fetch_assoc($result)){
   <div class="posts-header">
       <button class="posts-img-btn"
           style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
-              class="posts-img" src="<?php echo "images/". $row['userprofile']?>" alt=""></button>
+              class="posts-img" style="object-fit: cover;" src="<?php echo "images/". $row['userprofile']?>" alt=""></button>
       <div class="posts-head">
           <p class="posts-text"><?php echo $row['Firstname']."".$row['Lastname']?></p>
           <p class="posts-text" style="display: inline;margin-top: 0; ">
@@ -241,11 +241,24 @@ while($row = mysqli_fetch_assoc($result)){
       <p style="word-break: break-all;"><?php echo $row['Text']?></p>
   </div>
   <div class="posts-footer">
-      <img src="/images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
-      <img src="/images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
-      <button class="footer-text1">2.8 Like</button>
-      <button type="button"  class="modal-btn footer-text2"> comments</button>
-      <button class="footer-text3">share</button>
+  
+  <?php
+    $q5 = "SELECT COUNT(*)  AS likes FROM likes WHERE PostID = $postID";
+    $result5 = mysqli_query($conn,$q5);
+    $row5 = mysqli_fetch_assoc($result5);
+    $q6 = "SELECT COUNT(*)  AS reports FROM reports WHERE PostID = $postID";
+    $result6 = mysqli_query($conn,$q6);
+    $row6 =  mysqli_fetch_assoc($result6);
+    $q7 = "SELECT COUNT(*)  AS comments FROM comments WHERE postID = $postID";
+    $result7 = mysqli_query($conn,$q7);
+    $row7 =  mysqli_fetch_assoc($result7);
+    ?>
+      <img src="images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
+      <img src="images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
+      <button  class="footer-text1 like-button" data-postid="<?php echo $postID ?>"><?php echo $row5['likes']?>- Like</button>
+      <button   class="modal-btn footer-text2"><?php echo $row7['comments']?> comments</button>
+      <button  class="footer-text3 report-button" data-postid="<?php echo $postID ?>"><?php echo $row6['reports']?>-Reports</button>
+      
   </div>
   <!-- Modal-->
   <div class="modal">
@@ -266,7 +279,7 @@ while($row = mysqli_fetch_assoc($result)){
       $result2 = mysqli_query($conn,$q2);
       while($row2 = mysqli_fetch_assoc($result2)){?>
       <li class="comments-list">
-        <img src="<?php echo "images/". $row2['userprofile']?>" alt="">
+        <img style="object-fit: cover;" src="<?php echo "images/". $row2['userprofile']?>" alt="">
         <div class="comment-container">
             <p><?php echo $row2['Firstname']." ".$row2['Lastname']?></p>
             <span><?php echo $row2['comment']?></span>
@@ -279,10 +292,8 @@ while($row = mysqli_fetch_assoc($result)){
     </ul>
     </div>
     <div class="comments-bottom">
-      <form action="">
-        <input type="text" name="comment">
-        <button class="comment-btn" type="button">Add Comment</button>
-      </form>
+        <input type="text" name="comment" id="comment-input-<?php echo $postID ?>">
+        <button class="comment-btn" data-postid="<?php echo $postID ?>" >Add Comment</button>
     </div>
   </div>
   <!-- MODAL END HERE-->
@@ -295,7 +306,7 @@ while($row = mysqli_fetch_assoc($result)){
                 <div class="posts-header">
                     <button class="posts-img-btn"
                         style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
-                            class="posts-img" src="<?php echo "images/". $row['userprofile'] ?>" alt=""></button>
+                            class="posts-img" style="object-fit: cover;" src="<?php echo "images/". $row['userprofile'] ?>" alt=""></button>
                     <div class="posts-head">
                         <p class="posts-text"><?php echo $row['Firstname']."".$row['Lastname']?></p>
                         <p class="posts-text" style="display: inline;margin-top: 0; "><?php
@@ -311,14 +322,27 @@ while($row = mysqli_fetch_assoc($result)){
                     <p style="word-break: break-all;"><?php echo $row['Text']?></p>
                 </div>
                 <div class="posts-images-container">
-                    <img class="posts-img1" src="<?php echo"images/". $row['postImage']?>" alt="">
+                    <img class="posts-img1" style="object-fit: cover;" src="<?php echo"images/". $row['postImage']?>" alt="">
                 </div>
                 <div class="posts-footer">
-                    <img src="/images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
-                    <img src="/images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
-                    <button class="footer-text1">2.8 Like</button>
-                    <button type="button"  class="modal-btn footer-text2"> comments</button>
-                    <button class="footer-text3">share</button>
+                
+                <?php
+    $q5 = "SELECT COUNT(*)  AS likes FROM likes WHERE PostID = $postID";
+    $result5 = mysqli_query($conn,$q5);
+    $row5 = mysqli_fetch_assoc($result5);
+    $q6 = "SELECT COUNT(*)  AS reports FROM reports WHERE PostID = $postID";
+    $result6 = mysqli_query($conn,$q6);
+    $row6 =  mysqli_fetch_assoc($result6);
+    $q7 = "SELECT COUNT(*)  AS comments FROM comments WHERE postID = $postID";
+    $result7 = mysqli_query($conn,$q7);
+    $row7 =  mysqli_fetch_assoc($result7);
+    ?>
+      <img src="images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
+      <img src="images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
+      <button  class="footer-text1 like-button" data-postid="<?php echo $postID ?>"><?php echo $row5['likes']?>- Like</button>
+      <button   class="modal-btn footer-text2"><?php echo $row7['comments']?> comments</button>
+      <button  class="footer-text3 report-button" data-postid="<?php echo $postID ?>"><?php echo $row6['reports']?>-Reports</button>
+      
                 </div>
                 <!-- Modal-->
   <div class="modal">
@@ -339,7 +363,7 @@ while($row = mysqli_fetch_assoc($result)){
       $result2 = mysqli_query($conn,$q2);
       while($row2 = mysqli_fetch_assoc($result2)){?>
       <li class="comments-list">
-        <img src="<?php echo "images/". $row2['userprofile']?>" alt="">
+        <img style="object-fit: cover;" src="<?php echo "images/". $row2['userprofile']?>" alt="">
         <div class="comment-container">
             <p><?php echo $row2['Firstname']." ".$row2['Lastname']?></p>
             <span><?php echo $row2['comment']?></span>
@@ -352,10 +376,8 @@ while($row = mysqli_fetch_assoc($result)){
     </ul>
     </div>
     <div class="comments-bottom">
-      <form action="">
-        <input type="text" name="comment">
-        <button class="comment-btn" type="button">Add Comment</button>
-      </form>
+        <input type="text" name="comment" id="comment-input-<?php echo $postID ?>">
+        <button class="comment-btn" data-postid="<?php echo $postID ?>" >Add Comment</button>
     </div>
   </div>
   <!-- MODAL END HERE-->
@@ -394,7 +416,7 @@ while($row = mysqli_fetch_assoc($result)){
   <div class="posts-header">
       <button class="posts-img-btn"
           style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
-              class="posts-img" src="<?php echo "images/". $row['userprofile']?>" alt=""></button>
+              class="posts-img" style="object-fit: cover;" src="<?php echo "images/". $row['userprofile']?>" alt=""></button>
       <div class="posts-head">
           <p class="posts-text"><?php echo $row['Firstname']."".$row['Lastname']?></p>
           <p class="posts-text" style="display: inline;margin-top: 0; ">
@@ -411,11 +433,23 @@ while($row = mysqli_fetch_assoc($result)){
       <p style="word-break: break-all;"><?php echo $row['Text']?></p>
   </div>
   <div class="posts-footer">
+    <?php
+    $q5 = "SELECT COUNT(*)  AS likes FROM likes WHERE PostID = $postID";
+    $result5 = mysqli_query($conn,$q5);
+    $row5 = mysqli_fetch_assoc($result5);
+    $q6 = "SELECT COUNT(*)  AS reports FROM reports WHERE PostID = $postID";
+    $result6 = mysqli_query($conn,$q6);
+    $row6 =  mysqli_fetch_assoc($result6);
+    $q7 = "SELECT COUNT(*)  AS comments FROM comments WHERE postID = $postID";
+    $result7 = mysqli_query($conn,$q7);
+    $row7 =  mysqli_fetch_assoc($result7);
+    ?>
       <img src="images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
       <img src="images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
-      <button class="footer-text1">2.8 Like</button>
-      <button type="button"  class="modal-btn footer-text2"> comments</button>
-      <button class="footer-text3">share</button>
+      <button  class="footer-text1 like-button" data-postid="<?php echo $postID ?>"><?php echo $row5['likes']?>- Like</button>
+      <button   class="modal-btn footer-text2"><?php echo $row7['comments']?> comments</button>
+      <button  class="footer-text3 report-button" data-postid="<?php echo $postID ?>"><?php echo $row6['reports']?>-Reports</button>
+      
   </div>
   <!-- Modal-->
   <div class="modal">
@@ -425,7 +459,7 @@ while($row = mysqli_fetch_assoc($result)){
     </div>
     <div class="comments-container">
     <ul>
-      <?php
+    <?php
       $q2 = "SELECT *\n"
 
       . "FROM comments c\n"
@@ -436,7 +470,7 @@ while($row = mysqli_fetch_assoc($result)){
       $result2 = mysqli_query($conn,$q2);
       while($row2 = mysqli_fetch_assoc($result2)){?>
       <li class="comments-list">
-        <img src="<?php echo "images/".$row2['userprofile']?>" alt="">
+        <img style="object-fit: cover;" src="<?php echo "images/".$row2['userprofile']?>" alt="">
         <div class="comment-container">
             <p><?php echo $row2['Firstname']." ".$row2['Lastname']?></p>
             <span><?php echo $row2['comment']?></span>
@@ -449,11 +483,8 @@ while($row = mysqli_fetch_assoc($result)){
     </ul>
     </div>
     <div class="comments-bottom">
-      
-      <form action="">
-        <input type="text" name="comment" >
-        <button class="comment-btn" type="button">Add Comment</button>
-      </form>
+        <input type="text" name="comment" id="comment-input-<?php echo $postID ?>">
+        <button class="comment-btn" data-postid="<?php echo $postID ?>" >Add Comment</button>
     </div>
   </div>
   <!-- MODAL END HERE-->
@@ -468,7 +499,7 @@ while($row = mysqli_fetch_assoc($result)){
                 <div class="posts-header">
                     <button class="posts-img-btn"
                         style="border-radius:50%;width: fit-content;background-color: transparent;border: transparent;"><img
-                            class="posts-img" src="<?php echo "images/".$row['userprofile'] ?>" alt=""></button>
+                            class="posts-img" style="object-fit: cover;" src="<?php echo "images/".$row['userprofile'] ?>" alt=""></button>
                     <div class="posts-head">
                         <p class="posts-text"><?php echo $row['Firstname']."".$row['Lastname']?></p>
                         <p class="posts-text" style="display: inline;margin-top: 0; "><?php
@@ -484,14 +515,27 @@ while($row = mysqli_fetch_assoc($result)){
                     <p style="word-break: break-all;"><?php echo $row['Text']?></p>
                 </div>
                 <div class="posts-images-container">
-                    <img class="posts-img1" src="<?php echo "images/".$row['postImage']?>" alt="">
+                    <img class="posts-img1" style="object-fit: cover;" src="<?php echo "images/".$row['postImage']?>" alt="">
                 </div>
                 <div class="posts-footer">
-                    <img src="/images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
-                    <img src="/images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
-                    <button class="footer-text1">2.8 Like</button>
-                    <button type="button"  class="modal-btn footer-text2"> comments</button>
-                    <button class="footer-text3">share</button>
+                
+                <?php
+    $q5 = "SELECT COUNT(*)  AS likes FROM likes WHERE PostID = $postID";
+    $result5 = mysqli_query($conn,$q5);
+    $row5 = mysqli_fetch_assoc($result5);
+    $q6 = "SELECT COUNT(*)  AS reports FROM reports WHERE PostID = $postID";
+    $result6 = mysqli_query($conn,$q6);
+    $row6 =  mysqli_fetch_assoc($result6);
+    $q7 = "SELECT COUNT(*)  AS comments FROM comments WHERE postID = $postID";
+    $result7 = mysqli_query($conn,$q7);
+    $row7 =  mysqli_fetch_assoc($result7);
+    ?>
+      <img src="images/i.feather-thumbs-up.jpg" style="border-radius: 50% ;" alt="">
+      <img src="images/i.feather-heart.jpg" style="border-radius:50% ;" alt="">
+      <button  class="footer-text1 like-button" data-postid="<?php echo $postID ?>"><?php echo $row5['likes']?>- Like</button>
+      <button   class="modal-btn footer-text2"><?php echo $row7['comments']?> comments</button>
+      <button  class="footer-text3 report-button" data-postid="<?php echo $postID ?>"><?php echo $row6['reports']?>-Reports</button>
+      
                 </div>
                 <!-- Modal-->
   <div class="modal">
@@ -512,7 +556,7 @@ while($row = mysqli_fetch_assoc($result)){
       $result2 = mysqli_query($conn,$q2);
       while($row2 = mysqli_fetch_assoc($result2)){?>
       <li class="comments-list">
-        <img src="<?php echo "images/".$row2['userprofile']?>" alt="">
+        <img style="object-fit: cover;" src="<?php echo "images/".$row2['userprofile']?>" alt="">
         <div class="comment-container">
             <p><?php echo $row2['Firstname']." ".$row2['Lastname']?></p>
             <span><?php echo $row2['comment']?></span>
@@ -525,10 +569,8 @@ while($row = mysqli_fetch_assoc($result)){
     </ul>
     </div>
     <div class="comments-bottom">
-      <form action="">
-        <input type="text" name="comment">
-        <button class="comment-btn" type="button">Add Comment</button>
-      </form>
+        <input type="text" name="comment" id="comment-input-<?php echo $postID ?>">
+        <button class="comment-btn" data-postid="<?php echo $postID ?>" >Add Comment</button>
     </div>
   </div>
   <!-- MODAL END HERE-->
@@ -611,6 +653,6 @@ while($row = mysqli_fetch_assoc($result)){
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="index1.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

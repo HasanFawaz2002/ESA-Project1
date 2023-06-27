@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
         } else if(mysqli_num_rows($result) === 1 && $row['role'] == 1){
             $_SESSION['role']=$row['role'];
             $_SESSION['userID']=$row['userID'];
-            header("location:test.php");
+            header("location:user.php");
         }else{
             $error = 'Invalid Email or Password';
         }
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     <a href="/guest.html"><img src="/images/Property_1_Default-removebg-preview.png" class="logo" alt=""></a>
     <div class="container">
         <div class="left-container">
-            <img src="/images/Connected world.gif" alt="">
+            <img src="images/Connected world.gif" alt="">
         </div>
         
         <div class="right-container" id="right">

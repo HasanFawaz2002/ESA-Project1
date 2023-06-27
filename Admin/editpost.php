@@ -7,6 +7,18 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .form-control{
+            margin:20px 20px 20px 20px;height:20px;padding:20px;
+            width: 700px;
+        }
+        @media screen and (max-width:700px) {
+
+            .form-control{
+                width: 400px;
+            }
+        }
+    </style>
     
 </head>
 
@@ -63,11 +75,11 @@ if(isset($_POST['update'])){
             <center><img style="width:200px ;" src="<?php echo "../images/".$currentPhoto;?>" alt=""></center>
             <div class="form-group">
                 <label for="postimage">Post Image</label>
-                <input type="file"  name="postimage"  class="form-control">
+                <input type="file" style="border: transparent;"  name="postimage"  class="form-control">
             </div>
             <div class="form-group">
                 <label for="text">Description</label>
-                <input type="text" name="text" style="width:600px;margin:20px 20px 20px 20px;height:20px;padding:20px;border:1px solid black" class="form-control" value="<?php echo $row['Text']?>">
+                <input type="text" name="text"  class="form-control" value="<?php echo $row['Text']?>">
             </div>
             <center><button type="submit" class="btn btn-success" name="update">Update</button></center>
 </form>

@@ -49,13 +49,14 @@ if (isset($_POST['signup'])) {
         $gendererror = "Please select your gender.";
     } else {
         // Check if the email already exists in the database
-        $email = $_POST["email"];
+        $email = $_POST['email'];
         $query = "SELECT * FROM user WHERE Email = '$email'";
         $result = mysqli_query($conn, $query);
-        if (mysqli_num_rows($result) === 1) {
+        if (mysqli_num_rows($result) > 0) {
             $emailerror = "Email already exists.";
         }
-    }
+    } 
+    if(!empty($_POST["firstname"]) && !empty($_POST["lastname"]) && !empty($_POST["email"]) && !empty($_POST["password"]) && !empty($_POST["age"]) && $_POST["gender"] != "Choose Your Gender" && mysqli_num_rows($result) === 0){
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
@@ -69,7 +70,8 @@ if (isset($_POST['signup'])) {
         $result1=mysqli_query($conn,$q1);
         $row = mysqli_fetch_assoc($result1);
         $_SESSION['userID'] = $row['userID'];
-        header("location:test.php");
+        header("location:user.php");
+    }
     }
 }
 ?>
@@ -77,10 +79,10 @@ if (isset($_POST['signup'])) {
     <div id="alert-container" style="top:0%; "></div> 
     <div class="container">
         <div class="left-container">
-            <img src="/images/Connected world.gif" alt="">
+            <img src="images/Connected world.gif" alt="">
         </div>
         <div class="middle-container" id="middle">
-            <a href="/guest.html"><img src="/images/Property 1=Default.jpg"  class="logo" alt=""></a>
+            <a href="/guest.html"><img src="images/Property 1=Default.jpg"  class="logo" alt=""></a>
             <form action="http://localhost/ESA/signup.php" method="post">
                 <h1>Sign Up</h1>
                 <table>

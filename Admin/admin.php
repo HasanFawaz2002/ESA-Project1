@@ -51,7 +51,7 @@ if(isset($_SESSION['name'])){
         <!--Sidebar-->
         <aside id="sidebar" style="z-index: 1;">
             <div class="sidebar-title">
-                <img src="../../images/Property 1=Default.jpg" alt="" style="width: 80px;border-radius:50%"><h1>Hangout</h1>
+                <img src="Property_1_Default-removebg-preview.png" alt="" style="width: 80px;border-radius:50%"><h1>Hangout</h1>
                 <i class='bx bx-x' onclick="closeSidebar()"></i>
             </div>
             <ul class="sidebar-list">
@@ -162,7 +162,7 @@ if(isset($_SESSION['name'])){
             </div>
             <ul class="user-list-items">
                 <?php
-                $q = "select * from user";
+                $q = "select * from user where role = 1";
                 $result = mysqli_query($conn,$q);
                 if(!$result){
                     die("Query Failed");
@@ -171,7 +171,7 @@ if(isset($_SESSION['name'])){
                         ?>
                         <li class="user-list-item">
                             <div class="user-profile">
-                            <img src='<?php echo "../images/".$row['userprofile']?>' style="width:70px ;" border="0">
+                            <img src='<?php echo "../images/".$row['userprofile']?>' style="width:70px ;object-fit: cover;" border="0">
                             <div class="user-id">
                                 <p>User-id:<?php echo $row['userID'];?></p>
                                 <p>Name:<?php echo $row['Firstname']." ".$row['Lastname'];?></p>
@@ -208,7 +208,7 @@ if(isset($_SESSION['name'])){
                         ?>
                 <div class="post-list-item">
                     <div class="post-details">
-                    <img src='<?php echo "../images/".$row['postImage']?>'  border="0">
+                    <img style="object-fit: cover;" src='<?php echo "../images/".$row['postImage']?>'  border="0">
                         <p>Post-iD: <?php echo $row['postID'];?></p>
                         <h3>User: <?php echo $row['Firstname']." ".$row['Lastname']?></h3>
                         <p>Description: <?php echo $row['Text'];?></p>
@@ -235,6 +235,6 @@ if(isset($_SESSION['name'])){
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="admin1.js"></script>
+    <script src="admin5.js"></script>
 </body>
 </html>

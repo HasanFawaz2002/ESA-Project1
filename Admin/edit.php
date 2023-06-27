@@ -48,14 +48,14 @@ if(isset($_POST['update'])){
                 if(!$result1){
                     die("Query Failed");
                 }else{
-                    header("location:admin.php?updatemsg=Your Record Has Been Updated");
+                    header("location:http://localhost/ESA/Admin/admin.php?updatemsg=Your Record Has Been Updated");
                 }
 }
 }
 
 ?>
 
-<form action="http://localhost/Admin/edit.php?id=<?php echo $id ?>" method="post" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+<form action="http://localhost/ESA/Admin/edit.php?id=<?php echo $id ?>" method="post" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
 <div class="form-group">
                 <label for="firstname">First Name</label>
                 <input type="text" name="firstname" style="width: 300px;margin:20px 20px 20px 20px;height:30px;padding:20px;border:1px solid black;" class="form-control" value="<?php echo $row['Firstname']?>">
