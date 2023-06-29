@@ -35,14 +35,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
         $query = "SELECT * FROM `user` WHERE `Email`='$email' AND `Password`='$password'";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
-        if (mysqli_num_rows($result) === 1 && $row['role'] == 0) {
+        if (mysqli_num_rows($result) === 1 && $row['role'] == 0 ) {
             $_SESSION['role']=$row['role'];
             $_SESSION['name']=$row['Firstname'];
             header("location:http://localhost/ESA/Admin/admin.php");
-        } else if(mysqli_num_rows($result) === 1 && $row['role'] == 1){
+        } else if(mysqli_num_rows($result) === 1 && $row['role'] == 1 && $row['status'] == ''){
             $_SESSION['role']=$row['role'];
             $_SESSION['userID']=$row['userID'];
             header("location:user.php");
+        }else if(mysqli_num_rows($result) === 1 && $row['status'] == 'ban'){
+            header("location:login.php?ban=Your Account Has Been Banned");
         }else{
             $error = 'Invalid Email or Password';
         }
@@ -50,6 +52,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
 }
 ?>
 <body>
+    <?php
+    if(isset($_GET['ban'])){
+        echo "<center><h1 style='color:red'>".$_GET['ban']."</h1></center>";
+    }
+    ?>
     <a href="/guest.html"><img src="/images/Property_1_Default-removebg-preview.png" class="logo" alt=""></a>
     <div class="container">
         <div class="left-container">

@@ -1,5 +1,4 @@
 //SideBar Toggle
-
 var sidebar = document.getElementById("sidebar");
 
 function openSidebar(){

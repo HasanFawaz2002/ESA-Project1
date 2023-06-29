@@ -190,7 +190,7 @@ padding: 20px 20px;
 .user-list{
     grid-area: main;
     overflow-y: auto;
-    padding: 20px 20px;
+    padding: 10px 10px;
     display: none;
 }
 
@@ -207,7 +207,8 @@ padding: 20px 20px;
 .user-list-items{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:20px
+    gap:10px;
+    padding-left: 10px;
 }
 .user-id{
     margin-left: 20px;
@@ -217,6 +218,7 @@ padding: 20px 20px;
 }
 .user-list-item{
     display: flex;
+    width: 530px;
     justify-content: space-between;
     align-items: center;
     background-color: lightblue;
@@ -242,6 +244,22 @@ padding: 20px 20px;
 }
 .user-list-item > button:active{
     transform: scale(0.85);
+}
+.banBtn{
+    color: white;
+    background-color: rgb(255,111,0);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.unbanBtn{
+    color: white;
+    background-color:  rgb(29, 38, 154);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 /* POST LIST*/
@@ -394,5 +412,7 @@ padding: 20px 20px;
     .post-list-items{
         padding-left: 0px;
     }
-    
+    .user-list-item{
+        width: 470px;
+    }
 }

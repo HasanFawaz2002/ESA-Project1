@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="toggle.js" defer></script>
     <link rel="stylesheet" href="admin.css">
     <style>
     
@@ -91,16 +92,21 @@ if(isset($_SESSION['name'])){
             </div>
             <div class="main-cards">
                 <div class="card">
+                <?php
+                    $q6 = 'SELECT COUNT(*) AS likes FROM likes';
+                    $result6 = mysqli_query($conn, $q6);
+                    $row6 = mysqli_fetch_assoc($result6);
+                    ?>
                     <div class="card-inner">
                         <h2>LIKES</h2>
                         <i class='bx bx-like'></i>
                     </div>
-                    <h1>4,021</h1>
+                    <h1><?php echo $row6['likes']?></h1>
                 </div>
 
                 <div class="card">
                     <?php
-                    $q3 = 'SELECT COUNT(*) AS users FROM user';
+                    $q3 = 'SELECT COUNT(*) AS users FROM user WHERE `role`=1';
                     $result3 = mysqli_query($conn, $q3);
                     $row3 = mysqli_fetch_assoc($result3);
                     ?>
@@ -147,6 +153,11 @@ if(isset($_SESSION['name'])){
                 echo ("<h3 style='text-align: center;color: red;'>".$_GET['updatemsg']."</h3>");
             }
             ?>
+            <?php 
+            if(isset($_GET['ban'])){
+                echo ("<h3 style='text-align: center;color: red;'>".$_GET['ban']."</h3>");
+            }
+            ?>
         </main>
         
         <!--End Of Main-->
@@ -168,6 +179,7 @@ if(isset($_SESSION['name'])){
                     die("Query Failed");
                 }else{
                     while($row = mysqli_fetch_assoc($result)){
+                        $userid = $row['userID'];
                         ?>
                         <li class="user-list-item">
                             <div class="user-profile">
@@ -179,8 +191,23 @@ if(isset($_SESSION['name'])){
                             </div>
                             </div>
                             <div>
+                                
                                 <a href="http://localhost/ESA/Admin/edit.php?id=<?php echo$row['userID']; ?>"><button class="editBtn" name="edit">Edit</button></a>
                                 <a href="http://localhost/ESA/Admin/delete.php?id=<?php echo$row['userID']; ?>"><button class="deleteBtn">Delete</button></a>
+                                <?php
+                                
+                                if ($row['status']=='ban') {
+    echo '<a href="http://localhost/ESA/Admin/unban.php?id=' . $row['userID'] . '">
+            <button class="banBtn" style="display: none;">Ban</button>
+            <button class="unbanBtn">Unban</button>
+          </a>';
+} else if($row['status']==''){
+    echo '<a href="http://localhost/ESA/Admin/ban.php?id=' . $row['userID'] . '">
+            <button class="banBtn">Ban</button>
+            <button class="unbanBtn" style="display: none;">Unban</button>
+          </a>';
+}
+?>
                             </div>
                         </li>
                         <?php
@@ -196,15 +223,18 @@ if(isset($_SESSION['name'])){
             <h2>POSTS</h2>
             <div class="post-list-items">
                 <?php
-                $q = "SELECT p.`postID`, p.`userID`, p.`Text`, u.`Firstname`,u.`Lastname`,p.`postImage`,p.`report`\n"
+                $q = "SELECT p.`postID`, p.`userID`, p.`Text`, u.`Firstname`,u.`Lastname`,p.`postImage`\n"
                 . "FROM `post` p\n"
                 . "JOIN `user` u ON u.`userID` = p.`userID`";
                 $result = mysqli_query($conn,$q);
-                
                 if(!$result){
                     die("Query Failed");
                 }else{
                     while($row = mysqli_fetch_assoc($result)){
+                        $postID = $row['postID'];
+                        $q10 = "SELECT COUNT(*) AS reports FROM reports where PostID = $postID ";
+                        $result10 = mysqli_query($conn,$q10);
+                        $row10 = mysqli_fetch_assoc($result10);
                         ?>
                 <div class="post-list-item">
                     <div class="post-details">
@@ -212,7 +242,7 @@ if(isset($_SESSION['name'])){
                         <p>Post-iD: <?php echo $row['postID'];?></p>
                         <h3>User: <?php echo $row['Firstname']." ".$row['Lastname']?></h3>
                         <p>Description: <?php echo $row['Text'];?></p>
-                        <p>Reports: <?php echo $row['report'];?></p>
+                        <p>Reports: <?php echo $row10['reports'];?></p>
                     </div>
                     <div class="post-btn">
                         <a href="http://localhost/ESA/Admin/editpost.php?id=<?php echo$row['postID']; ?>"><button class="btn btn-success">EDIT</button></a>
@@ -234,7 +264,6 @@ if(isset($_SESSION['name'])){
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="admin5.js"></script>
+    
 </body>
 </html>

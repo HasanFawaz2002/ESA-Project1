@@ -177,6 +177,8 @@ $(document).ready(function() {
           if (response === 'success') {
             // Update the UI or display a success message
             console.log('Like added successfully!');
+            // Update the like count
+            updateLikeCount(postid);
           } else {
             // Handle any error or display an error message
             console.log('Error: ' + response);
@@ -188,7 +190,28 @@ $(document).ready(function() {
         }
       });
     });
+  
+    // Function to update the like count using AJAX
+    function updateLikeCount(postid) {
+      $.ajax({
+        type: 'GET',
+        url: 'get_like_count.php', // Path to your PHP script getting the like count
+        data: { postid: postid },
+        success: function(response) {
+          // Update the like count in the UI
+          $('.like-button[data-postid="' + postid + '"]').text(response + '- Like');
+        },
+        error: function(xhr, status, error) {
+          // Handle the AJAX request error
+          console.log('AJAX Error: ' + error);
+        }
+      });
+    }
   });
+  
+
+
+  
 
   //Reports
 
@@ -198,18 +221,17 @@ $(document).ready(function() {
   
       $.ajax({
         type: 'POST',
-        url: 'report.php', // Path to your PHP script handling the report action
+        url: 'report.php', // Path to your PHP script handling the like action
         data: { postid: postid },
         success: function(response) {
           // Handle the response from the PHP script
           if (response === 'success') {
             // Update the UI or display a success message
-            console.log('Report added successfully!');
-          } else if (response === 'duplicate') {
-            // Display a message indicating that the user has already reported the post
-            console.log('You have already reported this post.');
+            console.log('report added successfully!');
+            // Update the like count
+            updateLikeCount(postid);
           } else {
-            // Handle any other error or display an error message
+            // Handle any error or display an error message
             console.log('Error: ' + response);
           }
         },
@@ -219,7 +241,25 @@ $(document).ready(function() {
         }
       });
     });
+  
+    // Function to update the like count using AJAX
+    function updateLikeCount(postid) {
+      $.ajax({
+        type: 'GET',
+        url: 'get_report_count.php', // Path to your PHP script getting the like count
+        data: { postid: postid },
+        success: function(response) {
+          // Update the like count in the UI
+          $('.report-button[data-postid="' + postid + '"]').text(response + '- Reports');
+        },
+        error: function(xhr, status, error) {
+          // Handle the AJAX request error
+          console.log('AJAX Error: ' + error);
+        }
+      });
+    }
   });
+  
 
  //comments
  $(document).ready(function() {
@@ -259,5 +299,58 @@ $(document).ready(function() {
 });
 
 
+// JavaScript code
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleButtons = document.querySelectorAll('.mb-1');
+
+  toggleButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Remove active class from all toggle buttons
+      toggleButtons.forEach(function(btn) {
+        btn.style.backgroundColor='white';
+      });
+
+      // Add active class to the clicked toggle button
+      this.style.backgroundColor='blue';
+    });
+  });
+});
 
 
+
+function filterPosts() {
+  const searchInput = document.getElementById('searchInput');
+  const searchText = searchInput.value.toLowerCase();
+
+  const postsContainer = document.getElementById('postsContainer');
+  const posts = postsContainer.getElementsByClassName('post');
+
+  for (let i = 0; i < posts.length; i++) {
+    const post = posts[i];
+    const userName = post.querySelector('.posts-text').textContent.toLowerCase();
+    const postText = post.querySelector('.posts-content p').textContent.toLowerCase();
+
+    if (userName.includes(searchText) || postText.includes(searchText)) {
+      post.style.display = 'block';
+      userName.style.color = 'blue';
+    } else {
+      post.style.display = 'none';
+    }
+  }
+}
+
+// Create an audio element and set the source of the sound file
+const sound = new Audio('images/facebook_likes.mp3');
+
+// Get all the like buttons
+const likeButtons = document.getElementsByClassName('like-button');
+
+// Add click event listener to each like button
+for (let i = 0; i < likeButtons.length; i++) {
+  likeButtons[i].addEventListener('click', playSound);
+}
+
+// Function to play the sound
+function playSound() {
+  sound.play();
+}
