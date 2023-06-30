@@ -31,10 +31,12 @@ session_start();
         </h3>
         <form class="d-flex" role="search" style="width: 35%">
           <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
+          id="searchInput"
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          oninput="filterPosts()"
           />
         </form>
         <div id="notification">
@@ -242,7 +244,7 @@ session_start();
 
 
       <!--carousel-->
-      <div class="content">
+      <div class="content"  id="postsContainer">
  <div class="wrapper" >
     
       <ul class="carousel" style="width: 99%;">
