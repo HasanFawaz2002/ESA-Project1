@@ -1,0 +1,154 @@
+body{
+    background-color: #E8F1FA;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+/* content Layout */
+
+.page-container{
+    display: grid;
+    
+    width: 100%;
+    background-color: aliceblue;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+#gamelink{
+    grid-column: 2;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 145px;
+    width: 245px;
+}
+#backbtn{
+
+    border: none;
+    background-color: #0055FF;
+    padding: 4px;
+    border-radius: 4px;
+    color: white;
+    
+}
+
+@media (max-width:700px) {
+   
+    .page-container{
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-left: 5rem;
+    }
+    
+    .content-container{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    #item{
+        margin-left: 5rem;
+
+    }
+    .nav-item{
+        margin-bottom: 1rem;
+        margin-top: 0.2rem;
+    }
+    
+    .btn1,.btn2{
+        background-color: transparent;
+        color: #0055FF;
+    }
+    #item-container{
+      align-items: flex-start;
+    }
+    .nav-link{
+        color: #0055FF;
+    }
+    .nav-link:hover{
+        color: #0055FF;
+    }
+    .form-control{
+        width: 240px;
+        transform: translateX(1rem);
+        
+    }
+    .navbar ul{
+        width: 240px;
+        background-color: white;
+    }
+    .container-fluid{
+        z-index: 1;
+    }
+    .card{
+        margin-left: 0 !important;
+    }
+}
+
+
+.card{
+    position: relative;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    width: 300px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: transparent;
+    border-radius: 15px;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-button{
+    position: absolute;
+    background-color: blue;
+    color: white;
+    padding: .5rem;
+    border: transparent;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1rem;
+    border-radius: 10px;
+    transition: all ease 400ms;
+  }
+  .card-button a{
+    color: white;
+    text-decoration: none;
+  }
+  .card-button:hover a{
+    color: blue
+  }
+  .card-button:hover{
+    background-color: white;
+    border: 1px solid blue;
+    color: blue;
+  }
+  p{
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    
+  }
+  
+    
+   img{
+    width: 300px;
+    height: 200px;
+    border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+  }

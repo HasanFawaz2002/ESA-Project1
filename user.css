@@ -1,0 +1,794 @@
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  
+
+/*animated logo*/
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #8B53FF 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+     transform: translateY(6px);
+}
+@media (max-width: 668px) {
+h3{
+  font-size: xx-small;
+}
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+  /* navbar starts here */
+.nav-a{
+  text-decoration: none;
+}
+
+  .navbar {
+    height: 65px;
+    
+   
+  }
+
+.navbar-brand>img{
+height: 35px;
+width: 35px;
+border-radius: 75px;
+}
+.ul-main{
+    display: flex;
+    gap: 15px;
+    
+    width: 255px;
+    
+}
+.firstitem{
+    display: flex;
+    gap: 8px;
+}
+.seconditem{
+    display: flex;
+    gap: 8px;
+}
+.thirditem{
+    display: flex;
+    gap: 8px;
+}
+
+@media (max-width: 768px) {
+    .container-fluid{
+        width: 100%;
+    }
+    .collapse{
+        background-color: aliceblue;
+border-radius: 8px;
+margin-top: 3px;
+overflow: hidden;
+    }
+    .ul-main{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+
+}
+  /* nav bar ends here */
+  
+/*main grid*/
+.main {
+    display: grid;
+    grid-template-columns: 20% 55% 22%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "sidebar content friendlist";
+    height: 100vh; 
+  }
+  @media screen and (max-width: 600px) {
+    .main {
+      display: grid;
+      grid-template-columns: 0% 100% 0%;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "sidebar content friendlist";
+      height: 100vh; 
+    }
+  }
+
+/*main grid ends here*/
+
+/*games starts here*/
+.games{
+  margin-top: 95px;
+  grid-area: sidebar;
+  margin-left: 17px;
+  padding: 25px;
+  background-color: white;
+  box-shadow: .2px .3px 3px  black;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 4px;
+}
+
+#gamesbtn{
+  border: none;
+  border-radius: 4px;
+  background-color: #0055FF;
+  color: white;
+  padding: 4px;
+}
+
+@media screen and (max-width: 700px){
+  .games{
+    display: none;
+  }
+}
+
+
+
+
+/*games ends here*/
+
+  /* sidebar starts here */
+  .dropdown-container{
+    padding: 15px;
+    margin-left: 15px;
+    margin-top: 195px;
+    grid-area: sidebar;
+   
+    width: fit-content;
+    
+    height: fit-content;
+    background-color: white;
+    border-radius: 8px;
+}
+.dropdown-container span{
+margin-left: 5px;
+}
+.rotate{
+    transform: rotate(90deg);
+}
+.dropdown-container ul li {
+    margin: 20px 10px 0 10px;
+}
+@media screen and (max-width: 700px) {
+  .dropdown-container{
+    display: none;
+  }
+}
+
+  /* sidebar ends here */
+
+
+ 
+  /*content starts here */
+  .content {
+   padding: 25px;
+    grid-area: content;
+  
+  }
+
+ /*carousel starts here*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.wrapper {
+  
+  width: 100%;
+  position: relative;
+
+  margin-top: 65px;
+}
+
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3));
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img {
+  background: #8B53FF;
+  height: 118px;
+  width: 128px;
+  border-radius: 50%;
+  border: 1px solid rgb(248, 15, 15);
+
+}
+.card .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+ 
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+.carousel .card span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card h2{
+    display: none;
+  }
+  .card span{
+    display: none;
+  }
+  .carousel .card {
+  
+    scroll-snap-align: start;
+    height: 75px;
+    list-style: none;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .wrapper .carousel{
+    overflow: hidden;
+    margin-left: 7%;
+    display: grid;
+    height: 81px;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((26% ));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 9px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    transform: translateX(-35px);
+  }
+  .carousel .card .img {
+    margin-top: 25px;
+    background: #8B53FF;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 1px solid rgb(248, 15, 15);
+  
+  }
+#wimage{
+  width: 75px;
+  height: 75px;
+  border: 1px solid rgb(248, 15, 15);
+}
+}
+/*carousel ends here*/
+
+
+
+
+/*create post starts here*/
+.cr-post{
+  grid-area: content;
+  background-color: white;
+  height: 231px;
+  width: 60%;
+ 
+  margin-left: 13%;
+  border-radius: 8px;
+
+  box-shadow: .9px .6px .6px .6px black ;
+  
+}
+.crbtn1{
+margin-right:155px ;
+}
+
+#cr-post-btn{
+color: white;
+background-color: #0055FF;
+border-radius: 4px;
+padding: 4px;
+border: none;
+  
+} 
+
+#cr-btn2{
+margin-left: 49%;
+}
+.image-preview {
+  margin-top: 10px;
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-preview img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+.cr-post{
+  grid-area: content;
+  background-color: white;
+  height: 115px;
+  width: 75%;
+ 
+  margin-left: 11%;
+  border-radius: 8px;
+  box-shadow: .6px .6px .6px .6px black ;
+  
+}
+.cr-post>button{
+transform: translateY(-6px);
+height: 35%;
+font-size: small;
+margin-left: none;
+margin-top: 8px;
+}
+#cr-btn2{
+margin-left: 44%;
+}
+
+}
+/*create post ends here*/
+
+
+  /* content ends here */
+
+
+/* friendlist starts here */
+  
+.friendlist{
+  grid-area: friendlist;
+  margin-top: 75px;
+  border-radius: 8px;
+}
+  
+  #friend-list { 
+    border-radius: 8px;
+    display: block;
+ right:0%;
+    margin: 0;
+    padding: 0;
+    width: 18%;
+    height:auto;
+    background: #EEE;
+    list-style-type: none;
+    
+  }
+  
+  .friend {
+    width: 300px;
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 1px gray;
+  }
+  
+  .friend img {
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+    border: 2px solid #AAA;
+    object-fit: cover;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  
+  .friend .name {
+    font-size: 18px;
+  }
+  
+  .friend.selected {
+    
+    color: white;
+  }
+  
+  .friend.selected img {
+    border-color: white;
+  }
+  
+  .friend:not(.selected):hover {
+    background: #DDD;
+  }
+  @media screen and (max-width: 600px) {
+    .friendlist{
+      grid-area: content;
+      margin-top: 355px;
+    }
+    #friend-list { 
+     display: none;
+      
+    }
+      }
+
+  /* friendlist ends here */
+
+  /*weather api starts here*/
+.card-weather{
+  grid-area: friendlist;
+height: fit-content;
+  z-index: 1;
+  background:linear-gradient(135deg,#00feba,#5b548a);
+  border-radius: 8px;
+  color: white;
+  margin: 19px;
+  padding:8px;
+  text-align: center;
+}
+.search-weather{
+ 
+height: 15%;
+  display: flex;
+  
+}
+.search-weather img{
+ border-radius: 75px;
+  height: 55%;
+  background-color: white;
+    
+  }
+  .search-weather input{
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+  }
+
+  .search-weather button{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 75px;
+    border: none;
+    margin-left: 4px;
+  }
+  .weather img{
+    height: 75px;
+    width: 75px;
+  }
+
+  .weather-icon{
+    width: 35px;
+ 
+  }
+  .details{
+    display: flex;
+    justify-content: space-between;
+  }
+  .details img{
+    height: 35px;
+    width: 35px;
+  }
+
+  @media screen and (max-width: 600px) {
+    
+    .search-weather{
+ 
+      height: 25%;
+        display: flex;
+        
+      }
+.details{
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+.weather{
+  display: flex;
+ justify-content: space-around;
+}
+#phum{
+display: none;
+}
+#pws{
+display: none;
+}
+#windimage{
+  margin: 8px;
+}
+.col{
+  display: flex;
+  padding: 8px;
+}
+.temp{
+  transform: translateY(31px);
+  margin-right: 4px;
+}
+.city{
+  transform: translateY(31px);
+}
+#humidityimage{
+margin-left: 18px;
+transform: translateY(11px);
+}
+.humidity{
+  
+  transform: translateY(14px);
+  margin-left: 9px;
+}
+#searchimg{
+  width: 9px;
+  height: 9px;
+  transform: translateY(-6px);
+}
+  }
+  /* .w-icon-flex{
+    display: flex;
+    padding: 3px;
+  } */
+
+ 
+
+
+
+
+
+  /* weather api ends here */
+
+
+  /*notification starts here */
+
+#notification{
+margin-left: 7px;
+}
+#bellbtn{
+  border: none;
+  background-color: transparent;
+}
+@media screen and (max-width: 600px) {
+
+
+
+
+}
+
+
+   /*notification ends here */
+
+
+  /* Modal Style*/
+
+
+
+.modal.open {
+  display: block;
+  /* Add additional styles for the open modal */
+}
+
+.comments-bottom{
+  margin-left: 100px;
+  margin-top: 20px;
+}
+.comment-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.commentclose{
+  border: transparent;
+  height: fit-content;
+  margin-right: 20px;
+  line-height: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+}
+
+.comments-bottom input{
+  width: 400px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+
+.modal .comments-list{
+  list-style: none;
+  display: flex;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+  padding: 5px;
+}
+
+.modal .comments-list .comment{
+  margin-left: 10px;
+}
+.comments-container{
+  overflow-y: auto;
+  height: 200px;
+}
+.comment-btn{
+  background-color: rgb(22, 22, 219);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  border: transparent;
+}
+.comments-list img{
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width:700px) {
+  .modal{
+      width: 450px;
+  }
+  .comments-bottom input{
+      width: 200px;
+  }
+  .comments-bottom{
+      margin-left: 50px;
+  }
+}
+
+/* Fisrt Post*/
+
+.first-post{
+  position: relative;
+  height: fit-content;
+  width: 90%;
+  border-radius: 25px;
+  margin-top: 2rem;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  padding-bottom: 15px;
+}
+.posts-img{
+  height:130px;
+  width: 130px;
+  border-radius: 50%;
+}
+.posts-img-btn{
+  margin: 2rem 0 0 2rem;
+}
+.posts-header{
+  display: flex;
+  align-items: center;
+}
+
+.posts-text{
+  color: black;
+  margin-left: 2rem;
+}
+.posts-btn{
+  margin-left: 25rem;
+  font-weight: bolder;
+  border: transparent;
+  background-color: transparent;
+}
+
+.posts-content{
+  margin-left:2rem ;
+  margin-top: 2rem;
+  width: 75%;
+}
+.posts-footer{
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+.footer-text1,.footer-text2,.footer-text3{
+  font-weight: bold;
+  margin: 0;
+  margin-left: 1.5rem;
+  border: 1px solid #0055FF;
+  background: white;
+  color: #0055FF;
+  border-radius: 25px;
+  transition: all ease 400ms;
+}
+.footer-text1:hover,.footer-text2:hover,.footer-text3:hover{
+  border: transparent;
+  background-color: #0055FF;
+  color: white;
+}
+
+/* Second post container */
+.second-post{
+  position: relative;
+  height: fit-content;
+  width: 90%;
+  background-color: white;
+  border-radius: 25px;
+  margin-top: 2rem;
+  padding-bottom: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.posts-images-container{
+  display: flex;
+}
+.posts-img1{
+width: 95%;
+height: 300px;
+margin-left: 10px;
+border-radius: 25px;
+}
+
+@media (max-width:600px) {
+
+  
+
+  .first-post{
+      width: 100%;
+      height: fit-content;
+      padding-bottom: 10px;
+  }
+  .second-post{
+    width: 100%;
+      height: fit-content;
+      padding-bottom: 10px;
+      
+  }
+  .posts-footer{
+      margin-bottom: 1.5rem;
+  }
+  .posts-btn{
+      margin-left: 15rem;
+  }
+}

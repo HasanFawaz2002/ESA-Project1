@@ -1,0 +1,179 @@
+
+body{
+margin: 0%;
+padding: 0%;
+
+}
+/* Content Layout */
+.page-container {
+    display: grid;
+    grid-template-columns: 20% 60% 16%;
+    margin-top: 2rem;
+  }
+  
+  /* Nav Bar Style */
+  /*animated logo*/
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #8B53FF 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+     transform: translateY(6px);
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+  .nav-a{
+    text-decoration: none;
+  }
+  
+    .navbar {
+      height: 65px;
+      top: 0%;
+     
+    }
+  
+  .navbar-brand>img{
+  height: 35px;
+  width: 35px;
+  border-radius: 75px;
+  }
+  .ul-main{
+      display: flex;
+      gap: 15px;
+      
+      width: 255px;
+      
+  }
+  .firstitem{
+      display: flex;
+      gap: 8px;
+  }
+  .seconditem{
+      display: flex;
+      gap: 8px;
+  }
+  .thirditem{
+      display: flex;
+      gap: 8px;
+  }
+  
+  @media (max-width: 768px) {
+      .container-fluid{
+          width: auto;
+      }
+      .collapse{
+          background-color: aliceblue;
+  border-radius: 8px;
+  margin-top: 3px;
+  overflow: hidden;
+      }
+      .ul-main{
+          display: flex;
+          flex-direction: column;
+          
+          
+      }
+  
+  
+  }
+  /* Side Bar */
+  #SO-btn {
+    margin-top: 115px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0055ff;
+    width: 175px;
+    height: 35px;
+    color: white;
+    float: inline-end;
+  }
+  
+  #SO-logo {
+    transform: translateY(156px);
+    width: 27px;
+    height: 45px;
+    color: white;
+    margin-left: 17px;
+  }
+  
+  .side-bar-container li {
+    margin-bottom: 5px;
+    transform: translateX(-25%);
+  }
+  
+  .side-bar-container {
+    height: fit-content;
+  }
+  
+  .sb-logo {
+    width: 29px;
+    height: 29px;
+    border-radius: 75px;
+    margin: 2px;
+  }
+  /*settings main*/
+  #Settings-main{
+    margin-top: 55px;
+    width: 451%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 9px;
+  }
+
+  .s-btn{
+    border: none;
+    background-color: white;
+    margin-top: 17px;
+    text-align: left;
+   
+    
+  }
+  .s-btn:hover{
+    background-color: rgb(214, 205, 205);
+  }
+ .setting-svg{
+    float: left;
+    margin-right: 15px;
+    
+ }
+
+ /*notifation strats here*/
+
+ #notification{
+  margin-left: 7px;
+  }
+  #bellbtn{
+    border: none;
+    background-color: transparent;
+  }
+  @media screen and (max-width: 600px) {
+  
+  
+  
+  
+  }
+
+
+ /*notification ends here*/
